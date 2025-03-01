@@ -1,0 +1,127 @@
+﻿# root = country
+# scope:war = the war we're evaluating war exhaustion for
+# No randomness is allowed in this script value
+
+war_exhaustion = {
+	add = {
+		add = define:NWar|WAR_EXHAUSTION_BASE
+		desc = "WAR_EXHAUSTION_BASE"
+	}
+	
+	add = {
+		if = {
+			limit = {
+				enemy_occupation <= 0.0
+			}
+			add = {
+				add = 0.0
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_NONE"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation < 0.125 #0.1
+			}
+			add = {
+				add = 0.125 #0.1
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_LOW"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation < 0.25
+			}
+			add = {
+				add = 0.3 #0.5 # Ya=Xa**2**(a/4)
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_MODERATE"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation < 0.5
+			}
+			add = {
+				add = 0.7 #1.0
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_SUBSTANTIAL"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation < 0.75
+			}
+			add = {
+				add = 1.25 #2
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_HIGH"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation < 0.875 #0.9
+			}
+			add = {
+				add = 1.75 #3
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_EXTREME"
+			}
+		}
+		else_if = {
+			limit = {
+				enemy_occupation <= 1.0
+			}
+			add = {
+				add = 200.0 #10
+				desc = "WAR_EXHAUSTION_FROM_ENEMY_OCCUPATION_TOTAL"
+			}
+		}
+	}
+
+	if = {
+		limit = { war_exhaustion_from_enemy_contested_wargoals >= 0.01 }
+		add = {
+			add = war_exhaustion_from_enemy_contested_wargoals
+			desc = "WAR_EXHAUSTION_FROM_ENEMY_CONTESTED_WARGOALS"
+		}
+	}
+	
+	if = {
+		limit = { war_exhaustion_from_casualties >= 0.01 }
+		add = {
+			add = war_exhaustion_from_casualties
+			desc = "WAR_EXHAUSTION_FROM_CASUALTIES"
+			multiply = {
+				add = 1
+				add = modifier:country_war_exhaustion_casualties_mult
+				min = 0
+				desc = "WAR_EXHAUSTION_FROM_country_war_exhaustion_casualties_mult"
+			}
+		}
+	}
+	
+	if = {
+		limit = { war_exhaustion_from_country_turmoil >= 0.01 }
+		add = {
+			add = war_exhaustion_from_country_turmoil
+			desc = "WAR_EXHAUSTION_FROM_TURMOIL"
+		}
+	}	
+	
+	if = {
+		limit = { war_exhaustion_from_lobby_clout >= 0.01 }
+		add = {
+			add = war_exhaustion_from_lobby_clout
+			desc = "WAR_OPPOSITION_FROM_LOBBIES"
+		}
+	}	
+	
+	if = {
+		limit = { war_support_from_lobby_clout <= -0.01 }
+		add = {
+			add = war_support_from_lobby_clout
+			desc = "WAR_SUPPORT_FROM_LOBBIES"
+		}
+	}
+	
+	add = {
+		add = "additional_war_exhaustion(scope:war.diplomatic_play)"
+		desc = "WAR_EXHAUSTION_FROM_EVENTS"
+	}
+}

@@ -1,0 +1,15 @@
+﻿# root = character
+# scope:actor = interacting country
+
+# Use for good interactions (e.g. inviting an agitator, granting leadership, etc.)
+LMA_normal_modifier_time = {
+	if = {
+		limit = {
+			has_global_variable = API_main_holder
+		}
+		value = 0
+	}
+	else = {
+		value = normal_modifier_time
+	}
+}

@@ -1,0 +1,96 @@
+﻿can_consolidate_subject = {
+	has_technology_researched = nationalism
+	is_subject = no
+	is_diplomatic_play_committed_participant = no
+	is_revolutionary = no
+	scope:target_country = {
+		subject_can_be_consolidation_target = yes
+	}
+	NOR = {
+		c:BIC ?= this
+		c:DEI ?= this
+	}
+}
+
+subject_can_be_consolidation_target = {
+	is_ai = yes
+	OR = {
+		custom_tooltip = {
+			text = consolidate_subject_country_tier_tt
+			OR = {
+				country_tier = city_state
+				country_tier = principality
+				country_tier = grand_principality
+			}
+		}
+		AND = {
+			custom_tooltip = {
+				text = consolidate_subject_country_tier_kingdom_tt
+				country_tier = kingdom
+			}
+			overlord = {
+				has_technology_researched = pan-nationalism
+			}
+		}
+	}
+	custom_tooltip = {
+		text = consolidate_subject_vassal_type_tt
+		OR = {
+			is_subject_type = subject_type_vassal
+			is_subject_type = subject_type_puppet
+		}
+	}
+	is_diplomatic_play_committed_participant = no 
+	is_revolutionary = no
+	liberty_desire < 25
+	any_neighbouring_state = {
+		owner = {
+			can_be_consolidation_recipient = yes
+		}
+	}
+}
+
+can_be_consolidation_recipient = {
+	save_temporary_scope_as = recipient_subject
+	NOT = {
+		this = scope:target_country
+	}
+	is_subject_of = root
+	custom_tooltip = {
+		text = consolidate_subject_vassal_type_tt
+		OR = {
+			is_subject_type = subject_type_vassal
+			is_subject_type = subject_type_puppet
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = consolidate_subject_primary_culture_tt
+			any_primary_culture = {
+				is_primary_culture_of = scope:target_country
+			}
+		}
+		custom_tooltip = {
+			text = consolidate_subject_acceptance_tt
+			AND = {
+				overlord = {
+					has_technology_researched = pan-nationalism
+					has_technology_researched = civilizing_mission
+				}
+				scope:target_country = {
+					any_primary_culture = {
+						count = all
+						shares_trait_with_any_primary_culture = scope:recipient_subject
+						scope:recipient_subject = {
+							cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	is_diplomatic_play_committed_participant = no 
+	is_revolutionary = no
+	liberty_desire < 50
+}

@@ -1,0 +1,6 @@
+﻿NPolitics = {
+	# Allow AI to consider more alternatives.
+	# Sometimes a lower clout government can still give high legitimacy if the ruler supports it.
+	# This should be fine performance-wise since AI only reforms government every 30 months
+	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_AI = 256 # When evaluating government reform options (for AI), only consider this many constellations (sorted by average clout, descending) [>=1]
+}

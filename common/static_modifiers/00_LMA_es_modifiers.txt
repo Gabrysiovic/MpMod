@@ -1,0 +1,3 @@
+﻿# Error Suppression: If API is loaded this should be overridden
+API_arranged_accident = {
+}

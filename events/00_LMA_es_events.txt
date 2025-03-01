@@ -1,0 +1,10 @@
+﻿# Error Suppression: If API is loaded this should be overridden
+
+namespace = API_ev
+
+# Update authority cost
+API_ev.1 = {
+	type = country_event
+	hidden = yes
+	immediate = { if = { limit = { has_variable = auth_cost } set_variable = API_main_holder } }
+}

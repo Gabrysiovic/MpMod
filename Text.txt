@@ -1,0 +1,24 @@
+Multiplayer Mod for the good guys at Hugbox
+
+What does this mod do:
+- Transferring cash to other countries
+- Improving railways (MAPI included)
+- Ability to release protectorates in a war 
+- Better Navy mechanics
+- Better Army mechanics
+- More Power Block Emblems, ability to join them anytime (by players)
+- More historical characters
+- Energy plants now behave in a more historical way
+- Ability to assasinate interest group leaders scales with Secret Police level
+- Slightly smarter AI
+- Countries are now quicker to capitulate after 100% occupation
+- Important events are characterized by headlines seen by all players
+- Better Germany and Austria Colors
+
+And many other small changes!
+
+SPECIAL MOD THANKS: "Transfer Cash", "Make my railway profitable again", "We need more transportation",
+"Liberate Country As Subject", "Timber to Steel - Naval Expansion Mod", "Sphere Emblems Plus", "Royal Splendor - Historical Monarchs",
+"Power Plants+", "Let me Assasinate", "Kuromi's AI", "Know when to Hold'em", "Joinable Powerblocks", "Headlines", "German Map Colors Overhaul",
+"GDP Plotline Plus Minimized", "Gas, Guns, Garb and Grub", "ECCHI Redux", "Distinct Order Icons", "Consolidate Subjects",
+"Better Recognition Mechanics", "A World To Win"

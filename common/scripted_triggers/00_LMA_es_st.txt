@@ -1,0 +1,5 @@
+﻿# Error Suppression: If API is loaded this should be overridden
+
+API_st_has_free_accident = {
+	always = no
+}

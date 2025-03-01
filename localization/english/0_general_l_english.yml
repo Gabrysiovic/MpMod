@@ -1,0 +1,70 @@
+﻿l_english:
+    
+    intervene_in_war.tt:0 "Join any [concept_war] where [SCOPE.sCountry('target_country_scope').GetName] is the [concept_war_leader]"
+    intervene_in_war:0 "Intervene in War"
+    intervene_in_war_action_name:0 "Join the [TARGET_COUNTRY.GetAdjective] War"
+    intervene_in_war_desc:0 "This [concept_diplomatic_action] allows the initiator to join any [concept_war] where the target country is the [concept_war_leader]."
+    intervene_in_war_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    
+    je_jap_shogun:0 "Shogunate Isolationism Policy"
+    je_jap_shogun_tt:0 "The current rulers do not allow us to conduct real foreign policy, disallowing us from pursuing external goals"
+    je_jap_shogun_reason:0 "We need to change our governance, now!"
+    is_meiji_restoration_complete:0 "Complete Meiji Restoration"
+    no_dp_modifier:0 "Closed policy"
+    
+    dsk_fra_empire_time:0 "The Napoleonic Eagle"
+    GER_FRA_decision:0 "Demand Britain and Russia not join the Franco-Prussian War"
+    GER_FRA_decision_desc:0 "They will gladly accept because our strength satisfies their policy of continental balance."
+
+
+    je_crisis_alsace_france:0 "The problem of Alsace-Lorraine"
+    je_crisis_alsace_germany:0 "The question of Alsace-Lorraine"
+    je_crisis_alsace_germany_reason:0 "We know what the Alsatians want, and we will unify with them! \n If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully."
+    je_crisis_alsace_france_reason:0 "Our eastern border keeps getting more and more precarious. If we cannot go back to our natural borders of France, at least we must keep Alsace-Lorraine! \n If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully. "
+
+
+    je_fra_pru_tt:0 "[SCOPE.sCountry('pru_scope').GetName] has taken leadership of Germany"
+    je_fra_aus_tt:0 "[SCOPE.sCountry('aus_scope').GetName] has taken leadership of Germany"
+    je_fra_ngf_tt:0 "North Germany has been unified"
+    je_fra_sgf_tt:0 "South Germany has been unified"
+    je_fra_pru_reason:0 "[SCOPE.sCountry('pru_scope').GetName] gradually rose to power in the mid-19th century, becoming the leading force in the German region. They achieved significant developments in politics, economy, and military, with their modernized army becoming one of the most powerful military forces in Europe.\n[SCOPE.sCountry('pru_scope').GetName] seeks to unify a Germany excluding [SCOPE.sCountry('aus_scope').GetName] by defeating them in war, which directly conflicts with our expansionist ambitions.\nGreat powers like [SCOPE.sCountry('gbr_scope').GetName] and [SCOPE.sCountry('rus_scope').GetName] are reluctant to see us grow too strong, thus allowing our neighbors to grow stronger."
+    ger_has_fail:0 "Germany is not unified"
+    ger_has_won:0 "We did not prevent Prussia from unifying Germany"
+    high_reparations:0 "Payer of Franco-Prussian War reparations"
+    high_reparations_1:0 "Recipient of Franco-Prussian War reparations"
+    dsk_france.1.t:0 "Germany does not exist"
+    dsk_france.1.d:0 "With the end of the war, [SCOPE.GetRootScope.GetCountry.GetName] firmly established its dominance on the continent."
+    dsk_france.1.f:0 "At that moment, I felt as if I were back at my grandfather Napoleon I's Battle of Jena. I am not only to forge the glory he once created but also to complete his unfinished task—to create a dazzling France on the European continent."
+    dsk_france.1.a:0 "Destined to prevail, invincible in battle"
+    modifier_fra_winner:0 "Destined to Prevail"
+    modifier_fra_loser:0 "Overpowered by Germany"
+
+
+    dsk_france.2.t:0 "Fall of the Second Empire"
+    dsk_france.2.d:0 "The emperor had finally lost support among the common people, the intelligentsia, and the bourgeoisie. All hopes for a bright future and the ascension of France to greatness, which had arisen at the time of the proclamation of the Second Empire, have dissipated. The Emperor had by his actions nurtured many enemies among the liberals in Paris, and now they chose the moment to strike. They assembled at the Palais des Bourbons, where they announced the overthrow of the Emperor and the proclamation of the Third French Republic. The Bonapartist forces were unable to oppose them, and were forced with great reluctance to acknowledge what had happened."
+    dsk_france.2.f:0 "«Frenchmen! The people have forestalled the Chamber that was hesitating. To save the country in danger, they claimed for the Republic: it is announced, and this revolution is led to the public law’s and public safety’s names. Citizens, watch over the city that is given to you; tomorrow, you will be with the army of the country’s avengers!» - Léon Gambetta"
+    dsk_france.2.a:0 "There is nothing we can do"
+
+    aus_alive:0 "Austria Hungary Empire Exists"
+    ger_alive:0 "German Empire Established"
+
+    ger_has_fail:0 "German Empire has not been established"
+    ger_has_formed:0 "German Empire has been established."
+
+    dsk_france.3:0 "News from North Germany"
+    dsk_france.3.t:0 "German success in the Alsace crisis!"
+    dsk_france.3.d:0 "Germany has been formed"
+    dsk_france.3.f:0 "News from our diplomatic envoy in Germany: Prussia annexed the Alsace-Lorraine region of France after the Franco-Prussian War and proclaimed the establishment of the German Empire at the Palace of Versailles."
+    dsk_france.3.a:0 "Whether Germany is a friend or foe is for us to decide."
+    
+    modifier_ger_winner:0 "Crown of Germany"
+    ally_fra_pru:0 "If there is an alliance or defensive pact between France and Prussia, the journal entry will resolve peacefully."
+    
+    dsk_france.4:0 "Crown of Germany - small"
+    dsk_france.4.t:0 "We are one nation, one people!"
+    dsk_france.4.d:0 "With our foothold west of the Rhine secured, all nations shall know the might of [SCOPE.GetRootScope.GetCountry.GetName]."
+    dsk_france.4.a:0 "The unification of the German people will please the populace"
+    dsk_france.4.f:0 " After long hours of debating we elected to seize the territory which was once German from France. Thanks to our brave soldiers we succeeded in annexing Alsace-Lorraine, our nation now expanding west of the Rhine. The strongholds of Metz and Strassburg will bolster the emerging German nation against attacks and will act as a symbol to our power! The local residents will soon leave behind any fondness they held for their French overlords."

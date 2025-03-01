@@ -1,0 +1,442 @@
+﻿ai_strategy_agricultural_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+	
+	type = administrative
+
+	building_group_weights = {
+		# KAI: Halve the building weights to make it less extreme.
+		bg_agriculture = 1.5
+		bg_ranching = 1.5
+		# KAI: Added whaling and logging.
+		# The idea of this strategy is to favor buildings that cost less infrastructure
+		# before railways are researched.
+		bg_whaling = 1.25
+		bg_fishing = 1.25
+		bg_plantations = 1.25
+		bg_logging = 1.25
+	}
+	
+	goods_stances = {
+		grain = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = grain } } }
+		meat = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = meat } } }
+		fish = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fish } } }
+		fruit = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fruit } } }
+		liquor = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = liquor } } }
+		wine = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = wine } } }
+		fabric = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fabric } } }
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	weight = {
+		value = 10		
+
+		if = {
+			limit = { 
+				exists = c:FRA
+				c:FRA = this
+				ruler = {
+					has_variable = legitimist_leader
+				}
+			}
+			add = 20
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.25 }
+			multiply = 1.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.35 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.50 }
+			multiply = 0.5
+		}			
+
+		if = {
+			limit = { 
+				exists = ig:ig_landowners
+				ig:ig_landowners = { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				exists = overlord				
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 0.5
+		}		
+	}
+}
+
+ai_strategy_plantation_economy = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+	
+	type = administrative
+
+	goods_stances = {
+		fruit = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fruit } } }
+		fabric = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fabric } } }
+		sugar = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = sugar } } }
+		coffee = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = coffee } } }
+		tea = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = tea } } }
+		opium = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = opium } } }
+		tobacco = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = tobacco } } }
+		dye = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = dye } } }
+		silk = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = silk } } }
+		rubber = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = rubber } } }
+	}	
+
+	building_group_weights = {
+		bg_plantations = 2.0
+		# KAI: Add rubber
+		bg_rubber = 2.0
+	}
+
+	possible = {
+		OR = {
+			capital.region = sr:region_dixie
+			country_is_in_south_america = yes
+			country_is_in_central_america = yes
+			country_is_in_india = yes
+			country_is_in_southeast_asia = yes
+			country_is_in_africa = yes	
+			country_is_in_east_asia = yes	
+			country_is_in_middle_east = yes	
+		}
+	}
+	
+	weight = {
+		value = 10
+
+		if = {
+			limit = { 
+				exists = ig:ig_landowners
+				ig:ig_landowners = { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}	
+		
+		if = {
+			limit = {
+				has_journal_entry = je_agricultural_development
+			}
+			add = 45
+		}
+	}
+}
+
+ai_strategy_resource_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
+	
+	type = administrative	
+
+	building_group_weights = {
+		bg_rubber = 1.5
+		bg_oil_extraction = 1.5
+		bg_mining = 1.5
+		bg_logging = 1.5
+	}
+	
+	goods_stances = {
+		coal = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = coal } } }
+		iron = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = iron } } }
+		oil = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = oil } } }
+		lead = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = lead } } }
+		wood = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = wood } } }
+		hardwood = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = hardwood } } }
+		sulfur = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = sulfur } } }
+		rubber = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = rubber } } }
+	}
+
+
+	possible = {
+		always = yes
+	}
+	
+	weight = {
+		value = 10		
+		
+		if = {
+			limit = {
+				has_radical_leftist_government = yes
+				NOT = {
+					ig:ig_rural_folk ?= {
+						is_powerful = yes
+						is_in_government = yes
+					}
+				}
+			}
+			add = 25
+		}	
+		
+
+		if = {
+			limit = { 
+				exists = ig:ig_industrialists
+				ig:ig_industrialists = { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 2.0
+		}
+		
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 2.0
+		}	
+	}
+}
+
+ai_strategy_industrial_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/industrial_expansion.dds"
+	
+	type = administrative
+	
+	goods_stances = {}
+	
+	building_group_weights = {
+		bg_manufacturing = 1.25
+		bg_rubber = 1.25
+		bg_oil_extraction = 1.25
+		bg_mining = 1.25
+		bg_logging = 1.25		
+	}
+	
+	weight = {
+		value = 10
+		
+		if = {
+			limit = {
+				OR = {
+					has_modifier = shogun_ig_forced_to_open_market
+					has_journal_entry = je_meiji_main					
+				}
+			}
+			add = 1000
+		}		
+
+		if = {
+			limit = { 
+				exists = c:FRA
+				c:FRA = this
+				ruler = {
+					OR = {
+						has_variable = orleanist_leader
+						has_variable = bonapartist_leader
+					}
+				}
+			}
+			add = 20
+		}
+
+		if = {
+			limit = {
+				has_radical_leftist_government = yes
+				NOT = {
+					ig:ig_rural_folk ?= {
+						is_powerful = yes
+						is_in_government = yes
+					}
+				}
+			}
+			add = 50
+		}	
+		
+		if = {
+			limit = {
+				has_law = law_type:law_command_economy	
+			}
+			multiply = 2
+		}	
+		
+		if = {
+			limit = { 
+				exists = ig:ig_industrialists
+				ig:ig_industrialists = { is_powerful = yes } 
+			}
+			multiply = 2.0
+		}	
+		
+		if = { 
+			limit = { literacy_rate < 0.20 }
+			multiply = 0.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.40 }
+			multiply = 0.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.60 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.80 }
+			multiply = 1.5
+		}			
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 1.5
+		}		
+	}
+}
+
+ai_strategy_placate_population = {
+	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
+	
+	type = administrative
+
+	desired_tax_level = low
+	max_tax_level = medium
+	min_tax_level = very_low
+
+	building_group_weights = {
+		bg_agriculture = 2.0
+		bg_ranching = 2.0
+	}
+	
+	goods_stances = {
+		opium = {
+			stance = does_not_want
+			trigger = {
+				has_journal_entry = je_opium_obsession
+			}
+		}
+	}
+
+	possible = {
+		has_law = law_type:law_traditionalism
+	}
+	
+	weight = {
+		value = 10
+		
+		if = { 
+			limit = { literacy_rate < 0.25 }
+			multiply = 1.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.35 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.50 }
+			multiply = 0.5
+		}	
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 0.5
+		}		
+		
+		if = {
+			limit = { 
+				exists = ig:ig_rural_folk
+				ig:ig_rural_folk = { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 0.1
+		}		
+	}
+}
+
+ai_strategy_colonial_extraction = {
+    icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
+    
+    type = administrative   
+    building_group_weights = {
+        bg_rubber = 1.5
+        bg_oil_extraction = 1.5
+        bg_mining = 1.5
+        bg_logging = 1.5
+        bg_plantations = 1.5
+    }
+    
+    goods_stances = {
+        coal = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = coal } } }
+        iron = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = iron } } }
+        oil = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = oil } } }
+        lead = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = lead } } }
+        wood = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = wood } } }
+        hardwood = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = hardwood } } }
+        sulfur = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = sulfur } } }
+        fruit = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fruit } } }
+        fabric = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = fabric } } }
+        sugar = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = sugar } } }
+        coffee = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = coffee } } }
+        tea = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = tea } } }
+        opium = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = opium } } }
+        tobacco = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = tobacco } } }
+        dye = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = dye } } }
+        silk = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = silk } } }
+        rubber = { stance = wants_export trigger = { kai_has_high_supply = { GOODS = rubber } } }
+    }
+    possible = {
+    	is_subject = yes
+    	is_country_type = colonial
+    }
+    
+    weight = {
+        value = 100
+    }
+}

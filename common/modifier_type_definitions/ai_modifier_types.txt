@@ -1,0 +1,48 @@
+﻿# Mobilization options are evaluated based on the AI value of their modifiers.
+# Then it is compared to the cost of its weekly goods cost
+# multiplied by MOBILIZATION_OPTION_MONEY_COST_FACTOR = 20.
+#
+# The goal here is to make most mobilization options evaluate to 10-20 times their goods cost.
+# So that AI would actually choose them based on goods cost.
+#
+# The options under `supplies` category are the exceptions.
+# The +25% goods consumption cannot be evaluated by this system.
+
+# unit_offense/defense_mult is valued at 10000 per 100%
+# Considering mechanized infantry has the base stat of 50/60
+# Each point of offense/defense should be worth 200 at a minimum
+unit_offense_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=200
+	}
+}
+
+unit_defense_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=200
+	}
+}
+
+# Morale recovery should be valued less than morale damage/loss
+unit_morale_recovery_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=2500
+	}
+}
+
+# The valuation of 10000 in vanilla is unreasonably high
+military_formation_movement_speed_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=2500
+	}
+}

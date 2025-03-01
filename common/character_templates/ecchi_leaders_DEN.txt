@@ -1,0 +1,58 @@
+﻿# Denmark
+
+## Hans Christian Andersen
+
+ecchi_den_andersen_hans_christian_character_template = {
+	dna = mr_den_andersen_hans_christian
+	first_name = ecchi_hans_christian
+	last_name = ecchi_Andersen
+	culture = cu:danish
+	female = no
+	ideology = ideology_humanitarian
+	interest_group = ig_trade_unions
+	birth_date = 1805.4.2
+	historical = yes
+	traits = {
+		literary
+		romantic
+		reserved
+		explorer
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_state_in_state_region = STATE_ZEALAND
+			NOT = {
+				cultural_acceptance_base = { target = cu:danish value < acceptance_status_4 }
+			}
+		}
+		earliest_usage_date = 1835.1.1
+		latest_usage_date = 1875.8.4
+		chance = 60
+	}
+}
+
+## Soren Kierkegaard
+
+ecchi_den_kierkegaard_character_template = {
+    first_name = ecchi_Soren_Aabye
+    last_name = ecchi_Kierkegaard
+    historical = yes
+    culture = cu:danish
+
+    ideology = ideology_positivist
+    interest_group = ig_petty_bourgeoisie
+    dna = ecchi_dna_soren_kierkegaard
+    birth_date = 1813.5.5
+    traits = { romantic inspirational_orator direct literary }
+    agitator_usage = {
+        country_trigger = {
+            has_state_in_state_region = STATE_ZEALAND
+            NOT = {
+                cultural_acceptance_base = { target = cu:danish value < acceptance_status_4 }
+            }
+        }
+        earliest_usage_date = 1835.1.1
+        latest_usage_date = 1855.11.11
+        chance = 60
+    }
+}

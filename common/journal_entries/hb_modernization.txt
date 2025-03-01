@@ -1,0 +1,133 @@
+﻿je_spring_reforms_government = {
+    group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		always=no
+    }
+	possible = {
+		AND = {
+			OR = 
+			{
+				c:JAP = ROOT
+				c:BRZ = ROOT
+				c:TUR = ROOT
+				c:PER = ROOT
+				c:CLM = ROOT
+				c:MEX = ROOT
+				c:POR = ROOT
+				c:SPA = ROOT
+				c:PAN = ROOT
+				c:SOK = ROOT
+			}
+			is_player = yes	
+		}
+		
+	
+	}	
+	complete = {
+        AND =
+		{
+		NOT = { has_law = law_type:law_autocracy }	
+        NOT = { has_law = law_type:law_state_religion }	
+        NOT = { has_law = law_type:law_slavery }
+
+		
+		}
+	}	
+	on_complete = {
+		add_modifier = {
+				name = hb_modernize_government_modifier
+				months = 128
+		}	
+	}
+	
+	weight = 200
+	should_be_pinned_by_default = yes
+}	
+
+je_spring_reforms_economic = {
+    group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		always=no
+    }
+	possible = {
+		AND = {
+			OR = 
+			{
+				c:JAP = ROOT
+				c:BRZ = ROOT
+				c:TUR = ROOT
+				c:PER = ROOT
+				c:CLM = ROOT
+				c:MEX = ROOT
+				c:POR = ROOT
+				c:SPA = ROOT
+				c:PAN = ROOT
+				c:SOK = ROOT
+			}
+			is_player = yes	
+		}
+		
+	}	
+	complete = {
+        AND = {
+		NOT = { has_law = law_type:law_serfdom }
+		NOT = { has_law = law_type:law_land_based_taxation }
+		NOT = { has_law = law_type:law_traditionalism }	 
+		 	
+		}
+	}
+	on_complete = {
+		add_modifier = {
+				name = hb_modernize_economy_modifier
+				months = 128
+		}	
+	}
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}
+
+	
+	
+je_spring_reforms_landowners = {
+    group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		always=no
+    }
+	possible = {
+		AND = {
+			OR = 
+			{
+				c:JAP = ROOT
+				c:BRZ = ROOT
+				c:TUR = ROOT
+				c:PER = ROOT
+				c:CLM = ROOT
+				c:MEX = ROOT
+				c:POR = ROOT
+				c:SPA = ROOT
+				c:PAN = ROOT
+				c:SOK = ROOT
+			}
+			is_player = yes	
+		}
+		
+	}
+	complete = {
+        AND = {
+		NOT = { ig:ig_landowners = {is_powerful = yes} }
+		NOT = { ig:ig_devout = {is_powerful = yes} }
+		 	
+		}
+	}	
+	on_complete = {
+		add_modifier = {
+				name = hb_modernize_landowners_modifier
+				months = 128
+		}	
+	}
+	
+	weight = 200
+	should_be_pinned_by_default = yes
+}		
+

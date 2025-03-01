@@ -1,0 +1,152 @@
+﻿je_crisis_alsace_france = {
+	group = je_group_internal_affairs
+	icon = "gfx/interface/icons/event_icons/fra.dds"
+
+	is_shown_when_inactive = {
+		c:FRA = ROOT
+    }	
+	
+	
+	possible = 
+	{
+		OR = 
+		{
+		c:FRA = ROOT
+		}
+	
+	}
+
+	complete = {
+		Year >= 1871
+		NOT = { exists = c:GER }
+		custom_tooltip = {
+			text = ger_has_fail
+			NOT = { exists = c:GER }
+		}
+		is_at_war = no
+		owns_entire_state_region = STATE_ALSACE_LORRAINE
+	}
+	
+	on_complete = {
+		trigger_event = { id = dsk_france.1 }
+	}
+	
+	fail = {
+		NOT = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
+		custom_tooltip = {
+			text = ger_has_formed
+			exists = c:GER
+		}
+	}
+	on_fail = {
+        trigger_event = { id = dsk_france.2 }
+	}
+	
+	
+	invalid = {
+		custom_tooltip = {
+			text = ally_fra_pru
+			ROOT =
+			{
+				OR = {
+					has_diplomatic_pact = {
+						who = c:GER
+						type = defensive_pact
+					}
+					has_diplomatic_pact = {
+						who = c:GER
+						type = alliance
+					}
+					has_diplomatic_pact = {
+						who = c:PRU
+						type = defensive_pact
+					}
+					has_diplomatic_pact = {
+						who = c:PRU
+						type = alliance
+					}
+					has_diplomatic_pact = {
+						who = c:NGF
+						type = defensive_pact
+					}
+					has_diplomatic_pact = {
+						who = c:NGF
+						type = alliance
+					}
+				}
+			}			
+		}		
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+	
+je_crisis_alsace_germany = {
+	group = je_group_internal_affairs
+	icon = "gfx/interface/icons/event_icons/ger.dds"
+
+	is_shown_when_inactive = {
+		c:PRU = ROOT
+    }	
+	
+	
+	possible = 
+	{
+		OR = 
+		{
+		c:PRU = ROOT
+		c:NGF = ROOT
+		c:GER = ROOT
+		}
+	
+	}
+
+	complete = {
+	Year <= 1871
+	owns_entire_state_region = STATE_ALSACE_LORRAINE
+	custom_tooltip = {
+	   text = ger_alive
+       c:GER = ROOT           
+        }
+	}
+	
+	on_complete = {
+		trigger_event = { id = dsk_france.4	}
+      }
+	fail = {
+		NOT = { owns_entire_state_region = STATE_ALSACE_LORRAINE }
+		OR = 
+			{
+			custom_tooltip = {
+				text = ger_alive
+				c:GER = ROOT           
+				}
+			Year >= 1871
+			}
+		}
+		
+	invalid = {
+		custom_tooltip = {
+			text = ally_fra_pru
+			ROOT =
+			{
+				OR = {
+					has_diplomatic_pact = {
+						who = c:FRA
+						type = defensive_pact
+					}
+					has_diplomatic_pact = {
+						who = c:FRA
+						type = alliance
+					}
+				}
+			}			
+		}		
+	}	
+		
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+	

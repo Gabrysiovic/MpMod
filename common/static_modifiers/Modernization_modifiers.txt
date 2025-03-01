@@ -1,0 +1,22 @@
+﻿relaxed_safety_procedures = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_ship_positive.dds
+    unit_navy_offense_mult = 0.05
+    unit_navy_defense_mult = 0.05
+}
+
+
+modernization_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_tech_spread_add = 25
+
+}
+modernization_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_tech_spread_add = 25
+
+}
+modernization_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_tech_spread_add = 25
+
+}

@@ -1,0 +1,1 @@
+﻿MAX_MANDATES = 1					# This is the maximum number of mandates that can be accumulated at once

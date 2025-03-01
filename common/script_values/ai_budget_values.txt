@@ -1,0 +1,76 @@
+﻿# Get the country's treasury income excluding investment pool transfer.
+#
+# Input Scopes: country
+# Output Scopes: value
+kai_state_income = {
+	value = income
+	subtract = {
+		value = investment_pool_gross_income
+		subtract = investment_pool_net_income
+	}
+}
+
+# Get the country's treasury income multiplier due to tax level.
+#
+# Input Scopes: country
+# Output Scopes: value
+kai_state_income_normal_multi = {
+	value = 1.0
+	if = {
+		limit = {
+			tax_level = very_high
+		}
+		add = 0.3
+	}
+	else_if = {
+		limit = {
+			tax_level = high
+		}
+		add = 0.15
+	}
+	else_if = {
+		limit = {
+			tax_level = low
+		}
+		add = -0.15
+	}
+	else_if = {
+		limit = {
+			tax_level = very_low
+		}
+		add = -0.3
+	}
+}
+
+# Get the desired weekly military spending
+# We want to set this to 30% of the state income
+#
+# Input Scopes: country
+# Output Scopes: value
+kai_adjusted_military_spending = {
+	value = kai_state_income
+	divide = kai_state_income_normal_multi
+	save_temporary_value_as = total_state_income_normal
+
+	# Typically bureaucracy accounts for 30-35% of income
+	subtract = kai_estimated_bureaucracy_cost
+	# Divide the remainder between military and government + construction spending
+	multiply = 0.5
+
+	min = {
+		value = scope:total_state_income_normal
+		multiply = 0.15
+	}
+}
+
+# Estimates how much money is being spent on bureaucracy
+# This is surprisingly accurate throughout the game assuming vanilla balancing
+#
+# Input Scopes: country
+# Output Scopes: value
+kai_estimated_bureaucracy_cost = {
+	value = produced_bureaucracy
+	subtract = 100 # Base value
+	multiply = 20
+	min = 0
+}

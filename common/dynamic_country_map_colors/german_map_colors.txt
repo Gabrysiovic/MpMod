@@ -1,0 +1,31 @@
+﻿austria_hungary = {
+	color = rusty_austriahungary
+
+	possible = {
+		exists = c:AUS
+		THIS = c:AUS
+		country_has_primary_culture = cu:hungarian
+	}
+}
+
+unpleasant_germany = {
+	color = german_fascist
+
+	possible = {
+		exists = c:GER
+		THIS = c:GER
+		coa_dictatorship_trigger = yes
+	}
+}
+
+Imperial_federation =
+{
+	color = red_british
+
+	possible = 
+	{
+		exists = c:GBR
+		THIS = c:GBR
+		Not = { Exists = c:SCO }
+	}
+}	
