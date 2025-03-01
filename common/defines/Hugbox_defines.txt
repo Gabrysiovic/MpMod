@@ -1,7 +1,4 @@
 ﻿MAX_MANDATES = 1					# This is the maximum number of mandates that can be accumulated at once
 
-Npops = {
 ALLOW_ASSIMILATION_IN_HOMELANDS = yes
 ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes
-
-}
