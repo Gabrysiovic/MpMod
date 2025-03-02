@@ -1,4 +1,13 @@
-﻿MAX_MANDATES = 1					# This is the maximum number of mandates that can be accumulated at once
+﻿# This is the maximum number of mandates that can be accumulated at once
 
+NPOPS = {
+MAX_MANDATES = 1
+}
+			
+
+
+
+NPOPS = {
 ALLOW_ASSIMILATION_IN_HOMELANDS = yes
 ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes
+}
