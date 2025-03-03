@@ -42,7 +42,7 @@
 		country_allow_voting_full_acceptance_bool = yes
 
 		country_allow_assimilation_full_acceptance_bool = yes      # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 100
+		country_assimilation_full_acceptance_mult = 1
 
 		country_political_strength_violent_hostility_mult = -0.5
 		country_political_strength_cultural_erasure_mult = -0.4
@@ -124,7 +124,7 @@ law_national_supremacy = {
 
 		
         country_allow_assimilation_full_acceptance_bool = yes    # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 100
+		country_assimilation_full_acceptance_mult = 1
 
 		country_political_strength_violent_hostility_mult = -0.4
 		country_political_strength_cultural_erasure_mult = -0.3
@@ -196,7 +196,7 @@ law_racial_segregation = {
 		country_allow_voting_full_acceptance_bool = yes
 
 		country_allow_assimilation_full_acceptance_bool = yes           # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 100
+		country_assimilation_full_acceptance_mult = 1
 		
 		country_political_strength_violent_hostility_mult = -0.3
 		country_political_strength_cultural_erasure_mult = -0.2
@@ -268,7 +268,7 @@ law_cultural_exclusion = {
 		
 		
 		country_allow_assimilation_full_acceptance_bool = yes    # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 100
+		country_assimilation_full_acceptance_mult = 1
 	
 		country_allow_voting_violent_hostility_bool = no
 		country_voting_power_cultural_erasure_mult = -0.25
@@ -351,7 +351,7 @@ law_multicultural = {
 		country_allow_voting_full_acceptance_bool = yes
 
         country_allow_assimilation_full_acceptance_bool = yes     # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 100
+		country_assimilation_full_acceptance_mult = 1
 		
 
 		country_wage_violent_hostility_mult = -0.2
