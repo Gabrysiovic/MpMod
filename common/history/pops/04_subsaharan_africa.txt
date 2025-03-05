@@ -1395,7 +1395,7 @@
 	s:STATE_KAZEMBE = {
 		region_state:BMB = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 27204
 			}
 			create_pop = {
@@ -1422,7 +1422,7 @@
 		}
 		region_state:KZM = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 100000
 			}
 			create_pop = {
@@ -2023,7 +2023,7 @@
 	s:STATE_CONGO = {
 		region_state:BOB = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 20200
 			}
 			create_pop = {
@@ -2038,7 +2038,7 @@
 		}
 		region_state:LNG = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 36200
 			}
 			create_pop = {
@@ -2053,7 +2053,7 @@
 		}
 		region_state:TKE = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 29000
 			}
 			create_pop = {
@@ -2067,7 +2067,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 3000
 			}
 		}
@@ -2136,7 +2136,7 @@
 				size = 720000
 			}
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 6000
 			}
 			create_pop = {
@@ -2146,7 +2146,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 6000
 			}
 		}
@@ -2169,11 +2169,11 @@
 	s:STATE_BAS_CONGO = {
 		region_state:KON = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 252000
 			}
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				religion = catholic
 				size = 42000
 			}
@@ -2188,27 +2188,27 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 30000
 			}
 		}
 		region_state:YKA = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 165000
 			}
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 157500
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 15000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 10500
 			}
 		}
@@ -2240,16 +2240,16 @@
 	s:STATE_NORTH_ANGOLA = {
 		region_state:POR = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 176404
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				religion = catholic
 				size = 17396
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 116004
 			}
 			create_pop = {
@@ -2257,7 +2257,7 @@
 				size = 3368
 			}
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				religion = catholic
 				size = 160000
 			}
@@ -2270,7 +2270,7 @@
 				size = 116000
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 116004
 			}
 		}
@@ -2280,12 +2280,12 @@
 				size = 219996
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 18100
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 6000
 			}
 		}
@@ -2293,20 +2293,20 @@
 	s:STATE_EAST_ANGOLA = {
 		region_state:CHK = {
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 90000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 10000
 			}
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 8000
 			}
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 20000
 			}
 			create_pop = {
@@ -2316,11 +2316,11 @@
 		}
 		region_state:LND = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 103996
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 14400
 			}
 			create_pop = {
@@ -2329,13 +2329,13 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 10000
 			}
 		}
 		region_state:KSN = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 40000
 			}
 			create_pop = {
@@ -2344,7 +2344,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 4000
 			}
 			create_pop = {
@@ -2355,11 +2355,11 @@
 		}
 		region_state:LZO = {
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 40600
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 3400
 			}
 		}
@@ -2367,7 +2367,7 @@
 	s:STATE_KATANGA = {
 		region_state:KZM = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 120400
 			}
 			create_pop = {
@@ -2382,12 +2382,12 @@
 		}
 		region_state:LND = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 268400
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 12000
 			}
 		}
@@ -2426,7 +2426,7 @@
 		}
 		region_state:LNG = {
 			create_pop = {
-				culture = bakongo
+				culture = fluvial_bantu
 				size = 32000
 			}
 			create_pop = {
@@ -2461,40 +2461,40 @@
 	s:STATE_ZAMBIA = {
 		region_state:LZO = {
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 28092
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 28000
 			}
 			create_pop = {
-				culture = chewa
+				culture = fluvial_bantu
 				size = 9264
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 4000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = chewa
+				culture = fluvial_bantu
 				size = 3000
 			}
 		}
 		region_state:BMB = {
 			create_pop = {
-				culture = lacustrine_bantu
+				culture = fluvial_bantu
 				size = 48136
 			}
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 5000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 3000
 			}
 		}
@@ -2510,7 +2510,7 @@
 				size = 8396
 			}
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 96004
 			}
 			create_pop = {
@@ -2524,7 +2524,7 @@
 		}
 		region_state:MSK = {
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 196400
 			}
 			create_pop = {
@@ -2543,7 +2543,7 @@
 		}
 		region_state:MNC = {
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 200000
 			}
 			create_pop = {
@@ -2569,7 +2569,7 @@
 	s:STATE_ZAMBEZI = {
 		region_state:MTB = {
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 120000
 			}
 			create_pop = {
@@ -2596,7 +2596,7 @@
 		}
 		region_state:MSH = {
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 120000
 			}
 			create_pop = {
@@ -2611,7 +2611,7 @@
 		}
 		region_state:MNC = {
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 56000
 			}
 			create_pop = {
@@ -2645,15 +2645,15 @@
 	s:STATE_HEREROLAND = {
 		region_state:HRO = {
 			create_pop = {
-				culture = herero
+				culture = fluvial_bantu
 				size = 83996
 			}
 			create_pop = {
-				culture = lunda
+				culture = fluvial_bantu
 				size = 2000
 			}
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 47440
 			}
 			create_pop = {
@@ -2662,12 +2662,12 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lunda
+				culture = fluvial_bantu
 				size = 2000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 10000
 			}
 			create_pop = {
@@ -2876,7 +2876,7 @@
 		}
 		region_state:LZO = {
 			create_pop = {
-				culture = kavango_bantu
+				culture = fluvial_bantu
 				size = 14560
 			}
 		}
@@ -2888,11 +2888,11 @@
 				size = 66761
 			}
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 104000
 			}
 			create_pop = {
-				culture = tonga
+				culture = fluvial_bantu
 				size = 57000
 			}
 		}
@@ -2902,11 +2902,11 @@
 				size = 267043
 			}
 			create_pop = {
-				culture = shona
+				culture = fluvial_bantu
 				size = 156000
 			}
 			create_pop = {
-				culture = tonga
+				culture = fluvial_bantu
 				size = 323000
 			}
 		}
