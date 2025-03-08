@@ -351,7 +351,7 @@ law_multicultural = {
 		country_allow_voting_full_acceptance_bool = yes
 
         country_allow_assimilation_full_acceptance_bool = yes     # make it so that once you are T5 you can assimilate to prevent insane amounts of late game lag
-		country_assimilation_full_acceptance_mult = 1
+		country_assimilation_full_acceptance_mult = 10
 		
 
 		country_wage_violent_hostility_mult = -0.2

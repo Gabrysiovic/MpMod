@@ -1,13 +1,13 @@
 ﻿# This is the maximum number of mandates that can be accumulated at once
 
-NPOPS = {
+NPowerBlocs = {
 MAX_MANDATES = 1
 }
 			
 
 
 
-NPOPS = {
+NPops = {
 ALLOW_ASSIMILATION_IN_HOMELANDS = yes
 ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes
 }
