@@ -3,9 +3,12 @@
     
     production_methods = {
         PPP_pm_hydro_mechanical
-        PPP_pm_steam_engine
-        PPP_pm_steam_turbine
-        PPP_pm_gas_turbine
+        PPP_pm_steam_engine_local
+        PPP_pm_steam_engine_grid
+        PPP_pm_steam_turbine_local
+        PPP_pm_steam_turbine_grid
+        PPP_pm_gas_turbine_local
+        PPP_pm_gas_turbine_grid
     }
 }
 
@@ -13,8 +16,12 @@ PPP_pmg_HV_generation = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
     
     production_methods = {
-        PPP_pm_local_power
-        PPP_pm_grid_power
+        PPP_pm_local_power_hydro
+        PPP_pm_grid_power_hydro
+        PPP_pm_local_power_coal
+        PPP_pm_grid_power_coal
+        PPP_pm_local_power_oil
+        PPP_pm_grid_power_oil
     }
 }
 

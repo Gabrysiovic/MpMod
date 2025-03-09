@@ -37,9 +37,20 @@
     PPP_pm_steam_engine: "Moteurs à vapeur"
     PPP_pm_steam_turbine: "Turbines à vapeur"
     PPP_pm_gas_turbine: "Turbines à gaz"
-
-    PPP_pm_local_power: "Électricité locale"
-    PPP_pm_grid_power: "Réseau électrique"
+    
+    PPP_pm_steam_engine_local:  "$PPP_pm_steam_engine$"
+    PPP_pm_steam_engine_grid:   "$PPP_pm_steam_engine$"
+    PPP_pm_steam_turbine_local: "$PPP_pm_steam_turbine$"
+    PPP_pm_steam_turbine_grid:  "$PPP_pm_steam_turbine$"
+    PPP_pm_gas_turbine_local:   "$PPP_pm_gas_turbine$"
+    PPP_pm_gas_turbine_grid:    "$PPP_pm_gas_turbine$"
+    
+    PPP_pm_local_power_hydro: "Hydroélectrique locale"
+    PPP_pm_grid_power_hydro:  "Réseau hydroélectrique"
+    PPP_pm_local_power_coal:  "Électricité locale à charbon"
+    PPP_pm_grid_power_coal:   "Réseau électrique à charbon"
+    PPP_pm_local_power_oil:   "Électricité locale au fioul"
+    PPP_pm_grid_power_oil:    "Réseau électrique au fioul"
 
     PPP_pm_grid_base: "Distribution régionale"
 
