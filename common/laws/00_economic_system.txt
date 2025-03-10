@@ -104,16 +104,6 @@ law_interventionism = {
 			limit = {
 				has_law = law_type:law_traditionalism
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
-				OR = {
-					NOT = { has_strategy = ai_strategy_conservative_agenda }
-					any_political_movement = {
-						law_stance = {
-							law = law_type:law_interventionism
-							value > neutral
-						}	
-						political_movement_support >= 0.10
-					}			
-				}	
 			}
 			add = 1000
 		}
@@ -177,6 +167,7 @@ law_agrarianism = {
 		if = {
 			limit = {
 				has_journal_entry = je_great_reforms_serfdom
+				has_law = law_type:law_traditionalism
 			}
 			add = 1000 # Less preferred than either laissez-faire or interventionism
 		}
@@ -186,16 +177,6 @@ law_agrarianism = {
 			limit = {
 				has_law = law_type:law_traditionalism
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
-				OR = {
-					NOT = { has_strategy = ai_strategy_conservative_agenda }
-					any_political_movement = {
-						law_stance = {
-							law = law_type:law_agrarianism
-							value > neutral
-						}	
-						political_movement_support >= 0.10
-					}			
-				}	
 			}
 			add = 1000
 		}		
@@ -426,7 +407,7 @@ law_laissez_faire = {
 	}
 	
 	modifier = {
-	    country_loan_interest_rate_mult = -0.25
+		country_loan_interest_rate_mult = -0.25
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_capitalists_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.75
@@ -447,10 +428,12 @@ law_laissez_faire = {
 		
 		if = {
 			limit = { 
-				has_modifier = shogun_ig_forced_to_open_market
-				has_journal_entry = je_meiji_main
+				OR = {
+					has_modifier = shogun_ig_forced_to_open_market
+					has_journal_entry = je_meiji_main
+					has_journal_entry = je_great_reforms_serfdom
+				}
 				has_law = law_type:law_traditionalism
-				has_journal_entry = je_great_reforms_serfdom
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}	
@@ -602,10 +585,10 @@ law_command_economy = {
 		
 		country_authority_mult = 0.25
 		country_bureaucrats_pol_str_mult = 0.25
-		building_nationalization_cost_mult = -0.1
+		building_nationalization_cost_mult = -0.5
 		building_nationalization_radicals_mult = -0.75
-		country_government_dividends_efficiency_add = 0.6
-		country_private_construction_allocation_mult = 0.05
+		country_government_dividends_efficiency_add = 0.4
+		country_private_construction_allocation_mult = 0.1
 		
 		country_leverage_resistance_mult = 0.25
 

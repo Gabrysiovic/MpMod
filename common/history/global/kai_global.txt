@@ -1,0 +1,19 @@
+﻿GLOBAL = {
+	# AI does not have the ability to set wage levels by themselves
+	# I opted to just fix the starting condition rather than adding any logic here
+	# The low military wage on Ottoman Empire is the most outrageous since it cripples their military for the entire game
+	# EIC keeps the high military wage level since Sepoy Mutiny depends on it
+	c:CHI ?= {
+		set_government_wage_level = medium
+	}
+	c:KOR ?= {
+		set_government_wage_level = medium
+	}
+	c:TUR ?= {
+		set_military_wage_level = medium
+		set_government_wage_level = medium
+	}
+	c:SIC ?= {
+		set_government_wage_level = medium
+	}
+}

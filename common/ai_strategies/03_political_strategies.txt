@@ -8,7 +8,7 @@
 	}
 	
 	min_law_chance_to_pass = {
-		value = 15
+		value = 10
 		if = {
 			limit = { ai_has_reasons_to_not_oppose_law = yes }			
 			multiply = 0.5
@@ -16,7 +16,7 @@
 	}
 	
 	max_progressiveness = {
-		value = 50
+		value = 100
 	}
 	
 	max_regressiveness = {
@@ -24,12 +24,7 @@
 	}
 	
 	change_law_chance = { 
-		value = 5
-		
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 5
-		}
+		value = 10
 
 		if = {
 			limit = { 
@@ -163,7 +158,7 @@ ai_strategy_reactionary_agenda = {
 	}
 	
 	min_law_chance_to_pass = {
-		value = 15
+		value = 20
 		if = {
 			limit = { ai_has_reasons_to_not_oppose_law = yes }			
 			multiply = 0.5
@@ -180,11 +175,6 @@ ai_strategy_reactionary_agenda = {
 	
 	change_law_chance = { 
 		value = 5
-		
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 5
-		}
 
 		if = {
 			limit = { 
@@ -369,12 +359,7 @@ ai_strategy_progressive_agenda = {
 	}
 	
 	change_law_chance = { 
-		value = 10	
-
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 10
-		}	
+		value = 20
 
 		if = {
 			limit = { 
@@ -552,12 +537,7 @@ ai_strategy_egalitarian_agenda = {
 	}
 
 	change_law_chance = { 
-		value = 15	
-		
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 5
-		}	
+		value = 20
 
 		if = {
 			limit = { 
@@ -573,9 +553,6 @@ ai_strategy_egalitarian_agenda = {
 	
 	pro_interest_groups = {
 		ig_trade_unions
-		# KAI: Add pro-IGs
-		ig_rural_folk
-		ig_intelligentsia
 	}
 	
 	anti_interest_groups = {
@@ -724,7 +701,7 @@ ai_strategy_nationalist_agenda = {
 	}
 	
 	max_progressiveness = {
-		value = 50
+		value = 100
 	}
 	
 	max_regressiveness = {
@@ -732,12 +709,7 @@ ai_strategy_nationalist_agenda = {
 	}
 	
 	change_law_chance = { 
-		value = 10	
-		
-		if = {
-			limit = { any_interest_group = { is_insurrectionary = yes } }
-			add = 10
-		}
+		value = 20
 
 		if = {
 			limit = { 
@@ -754,9 +726,6 @@ ai_strategy_nationalist_agenda = {
 	pro_interest_groups = {
 		ig_armed_forces
 		ig_petty_bourgeoisie
-		# KAI: Add Industrialists so that this strategy has a stance on economic laws.
-		# This is necessary for abolishing Serfdom and Traditionalism.
-		ig_industrialists
 	}
 	
 	anti_interest_groups = {

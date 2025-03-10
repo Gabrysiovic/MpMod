@@ -30,16 +30,18 @@ building_government_administration = {
 	required_construction = construction_cost_very_low
 
 	ai_value = {
-		value = 1000
+		value = 250
 		
 		# KAI: try to cover tax capacity
-		# The weight is extreme to overcome the 0.1 multiplier from missing qualifications
 		if = {
 			limit = {
 				is_incorporated = yes
-				tax_capacity < tax_capacity_usage
+				tax_capacity < {
+					value = tax_capacity_usage
+					add = 10
+				}
 			}
-			add = 20000
+			add = 500
 		}
 	}
 

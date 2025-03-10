@@ -18,14 +18,14 @@ building_construction_sector = {
 	
 	# Construction sector should generally be preferred over other equal-priority spending items
 	ai_value = {
-		value = 1000
+		value = 2000
 		
 		# KAI: Prefer states with iron
 		if = {
 			limit = {
 				has_potential_resource = bg_iron_mining
 			}
-			add = 1000
+			add = 500
 		}
 	}
 

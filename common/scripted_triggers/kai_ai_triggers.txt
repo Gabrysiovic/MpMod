@@ -17,8 +17,7 @@ kai_has_high_supply = {
 }
 
 # Determine whether the country is big enough to use goods stances
-#
-# Small countries are excluded because since they cannot afford to maintain trade routes.
+# Small countries are excluded because since they cannot afford to maintain trade routes
 #
 # Supported Scopes: country
 kai_should_use_goods_stances = {
@@ -53,6 +52,48 @@ kai_eligible_for_american_migration_je = {
 					region = sr:region_pacific_coast
 					region = sr:region_great_plains
 				}
+			}
+		}
+	}
+}
+
+# Determine whether the country should be targeted for resolving the Schleswig-Holstein question
+# Namely, it should target Schleswig or Holstein, and NOT Denmark
+#
+# Supported Scopes: country
+kai_should_target_for_schleswig_holstein = {
+	any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+	OR = {
+		NOR = {
+			country_has_primary_culture = cu:north_german
+			country_has_primary_culture = cu:south_german
+		}
+		AND = {
+			is_subject = yes
+			any_overlord_or_above = {
+				NOR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+				}
+			}
+		}
+	}
+}
+
+# Determine whether the country is relevant for German unification
+# Exclude Baltic Governate
+#
+# Supported Scopes: country
+kai_relevant_for_german_unification = {
+	OR = {
+		country_has_primary_culture = cu:north_german
+		country_has_primary_culture = cu:south_german
+	}
+	any_scope_state = {
+		state_region = {
+			OR = {
+				is_homeland = cu:north_german
+				is_homeland = cu:south_german
 			}
 		}
 	}

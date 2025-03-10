@@ -1,7 +1,6 @@
 ﻿# Get the country's treasury income excluding investment pool transfer.
 #
 # Input Scopes: country
-# Output Scopes: value
 kai_state_income = {
 	value = income
 	subtract = {
@@ -10,10 +9,17 @@ kai_state_income = {
 	}
 }
 
+# Get the country's GDP per capita.
+#
+# Input Scopes: country
+kai_gdp_per_capita = {
+	value = gdp
+	divide = total_population
+}
+
 # Get the country's treasury income multiplier due to tax level.
 #
 # Input Scopes: country
-# Output Scopes: value
 kai_state_income_normal_multi = {
 	value = 1.0
 	if = {
@@ -43,33 +49,26 @@ kai_state_income_normal_multi = {
 }
 
 # Get the desired weekly military spending
-#
-# Vanilla uses 1 level of barracks per 500k annual GDP, which is adjusted thus:
-# - 10k weekly GDP
-# - 3500 state income (assuming 35% of GDP goes to state)
-# - 1250 adjusted spending (assuming 35% of state income can be spent on military)
+# We want to set this to 30% of the state income to be consistent with vanilla military sizes
 #
 # Input Scopes: country
-# Output Scopes: value
 kai_adjusted_military_spending = {
 	value = kai_state_income
 	divide = kai_state_income_normal_multi
 	save_temporary_value_as = total_state_income_normal
 
+	# Typically bureaucracy accounts for 30-40% of income
 	subtract = kai_estimated_bureaucracy_cost
-	multiply = 0.6
+	# Divide the remainder between military and government + construction spending
+	multiply = 0.5
 
-	min = {
-		value = scope:total_state_income_normal
-		multiply = 0.15
-	}
+	min = 0
 }
 
 # Estimates how much money is being spent on bureaucracy
 # This is surprisingly accurate throughout the game assuming vanilla balancing
 #
 # Input Scopes: country
-# Output Scopes: value
 kai_estimated_bureaucracy_cost = {
 	value = produced_bureaucracy
 	subtract = 100 # Base value
