@@ -213,7 +213,7 @@
 		# 840792
 		region_state:SPA = {
 			create_pop = {
-				culture = galician
+				culture = spanish
 				size = 828528
 			}
 			create_pop = {
@@ -230,7 +230,7 @@
 				size = 614264
 			}
 			create_pop = {
-				culture = basque
+				culture = spanish
 				size = 32000
 			}
 		}	
@@ -242,7 +242,7 @@
 				size = 1430808
 			}
 			create_pop = {
-				culture = basque
+				culture = spanish
 				size = 4000
 			}
 		}
@@ -254,11 +254,11 @@
 				size = 579200
 			}
 			create_pop = {
-				culture = catalan
+				culture = spanish
 				size = 32220
 			}
 			create_pop = {
-				culture = basque
+				culture = spanish
 				size = 700060
 			}
 		}
@@ -270,11 +270,11 @@
 				size = 401200
 			}
 			create_pop = {
-				culture = basque
+				culture = spanish
 				size = 100008
 			}
 			create_pop = {
-				culture = catalan
+				culture = spanish
 				size = 77996
 			}
 		}
@@ -282,7 +282,7 @@
 	s:STATE_CATALONIA = {
 		region_state:SPA = {
 			create_pop = {
-				culture = catalan
+				culture = spanish
 				size = 704308
 			}
 			create_pop = {
@@ -294,7 +294,7 @@
 	s:STATE_BALEARES = {
 		region_state:SPA = {
 			create_pop = {
-				culture = catalan
+				culture = spanish
 				size = 145244
 			}
 			create_pop = {
@@ -348,7 +348,7 @@
 				size = 989604
 			}
 			create_pop = {
-				culture = catalan
+				culture = spanish
 				size = 490392
 			}
 		}
