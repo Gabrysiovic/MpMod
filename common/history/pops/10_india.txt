@@ -84,7 +84,7 @@ POPS = {
 				pop_type = capitalists
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				size = 1712
 				pop_type = officers
 			}
@@ -149,7 +149,7 @@ POPS = {
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				size = 301
 				pop_type = bureaucrats
 			}
@@ -158,15 +158,15 @@ POPS = {
 	s:STATE_ASSAM = {
 		region_state:BIC = {
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				size = 341202
 			}
 			create_pop = {
-				culture = manipuri
+				culture = bengali
 				size = 10002
 			}
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				pop_type = slaves
 				size = 51020
 			}
@@ -185,76 +185,76 @@ POPS = {
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				size = 140
 				pop_type = bureaucrats
 			}
 		}
 		region_state:KKI = {
 			create_pop = {
-				culture = lushai
+				culture = bengali
 				size = 24591
 			}
 		}
 		region_state:NGA = {
 			create_pop = {
-				culture = naga
+				culture = bengali
 				size = 123919
 			}
 		}
 		region_state:MNP = {
 			create_pop = {
-				culture = manipuri
+				culture = bengali
 				size = 258104
 			}
 			create_pop = {
-				culture = manipuri
+				culture = bengali
 				religion = animist
 				size = 77096
 			}
 			create_pop = {
-				culture = lushai
+				culture = bengali
 				size = 29192
 			}
 			create_pop = {
-				culture = naga
+				culture = bengali
 				size = 39192
 			}
 		}
 		region_state:MGH = {
 			create_pop = {
-				culture = naga # Khasi
+				culture = bengali # Khasi
 				size = 62201
 			}
 		}
 		region_state:TIP = {
 			create_pop = {
-				culture = lushai # Tipperah
+				culture = bengali # Tipperah
 				size = 45102
 			}
 		}
 		region_state:ASM = {
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				size = 705200
 			}
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				pop_type = slaves
 				size = 45561
 			}
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				religion = animist
 				size = 250201
 			}
 			create_pop = {
-				culture = assamese
+				culture = bengali
 				religion = sunni
 				size = 61020
 			}
 			create_pop = {
-				culture = naga
+				culture = bengali
 				size = 150201
 			}
 		}
@@ -655,7 +655,7 @@ POPS = {
 				size = 200
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = bureaucrats
 				size = 310
 			}
@@ -1625,7 +1625,7 @@ POPS = {
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				size = 105
 				pop_type = bureaucrats
 			}
@@ -1848,7 +1848,7 @@ POPS = {
 				size = 15890
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				size = 6123
 				pop_type = bureaucrats
 			}
@@ -2019,7 +2019,7 @@ POPS = {
 				size = 69482
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = bureaucrats
 				size = 3212
 			}
@@ -2029,7 +2029,7 @@ POPS = {
 				size = 700
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = capitalists
 				size = 100
 			}
@@ -2044,7 +2044,7 @@ POPS = {
 				size = 2012
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = officers
 				size = 710
 			}
@@ -2268,7 +2268,7 @@ POPS = {
 				size = 9012
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = bureaucrats
 				size = 1812
 			}
@@ -2278,7 +2278,7 @@ POPS = {
 				size = 801
 			}
 			create_pop = {
-				culture = scottish
+				culture = british
 				pop_type = officers
 				size = 200
 			}
