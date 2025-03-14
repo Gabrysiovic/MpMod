@@ -1,0 +1,21 @@
+incorporation_speed_buff = {
+	is_shown = {	
+	country_rank = rank_value:great_power
+	country_rank = rank_value:major_power
+    country_rank = rank_value:minor_power
+    }
+	
+	possible = {
+	country_rank = rank_value:great_power
+	country_rank = rank_value:major_power
+    country_rank = rank_value:minor_power	
+    }	
+	
+	modifier = { 
+            incorporation_speed = 0.10
+    }
+}
+	
+
+	
+
