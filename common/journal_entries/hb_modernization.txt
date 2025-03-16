@@ -24,7 +24,7 @@
 		{
 		NOT = { has_law = law_type:law_autocracy }	
         NOT = { has_law = law_type:law_state_religion }	
-		NOT = { has_law = law_type:law_hereditiary_bureucrats }
+		NOT = { has_law = law_type:law_hereditary_bureaucrats }
         has_law = law_type:law_slavery_banned
 
 		
