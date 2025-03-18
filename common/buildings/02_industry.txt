@@ -5,7 +5,7 @@
 	levels_per_mesh = 5
 	
 	unlocking_technologies = {
-		aniline
+		art_silk
 	}
 	
 	production_method_groups = {

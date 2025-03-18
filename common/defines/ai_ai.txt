@@ -16,28 +16,35 @@
 	MAX_INSTITUTION_SPENDING_BASE = 0.008 # AI will not spend more BUR than this on institutions (scaled by weekly GDP)
 	MAX_INSTITUTION_SPENDING_PER_INSTITUTION = 0.002 # Added to MAX_INSTITUTION_SPENDING_BASE for each institution a country has
 
+	# For Qing, one level of institution can cost close to 80k
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_WANTS_TO_HAVE = 300000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'wants-to-have' project, regardless of income ratio
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_NICE_TO_HAVE = 300000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'nice-to-have' project, regardless of income ratio
+
 	# Stop the arms race
 	MONEY_SPENDING_LAND_THREAT_THRESHOLD = 10000 # If a hostile country has a more than this much larger army than AI does, it wants to increase military spending
 	MONEY_SPENDING_NAVY_THREAT_THRESHOLD = 10000 # If a hostile country has a more than this much larger navy than AI does, it wants to increase military spending
-
-	# Stop the starting army from being downsized
-	MONEY_SPENDING_MILITARY_EXCESSIVE_THRESHOLD = 2.5 # If actual-to-wanted number of barracks/naval bases is above this, AI considers it a target for cutting spending when needed
 
 	MONEY_SPENDING_INNOVATION_DESIRED_THRESHOLD = 1.5 # If innovation production compared to cap is worse than this, AI considers it important to improve
 	# Maintain port connections at a minimum
 	MONEY_SPENDING_SUPPLY_NETWORK_CRITICAL_THRESHOLD = 1.0 # If supply network is worse than this, AI considers it critical to improve it
 	MONEY_SPENDING_SUPPLY_NETWORK_DESIRED_THRESHOLD = 1.15 # If supply network is worse than this, AI wants to improve it
 
+	# Don't build government admin in Hokkaido just because qualification is missing
+	GOVERNMENT_BUILDING_STATE_MISSING_QUALIFICATIONS_MULT = 0.75 # Multiply score by this if there's not enough qualifications to staff the building
 	GOVERNMENT_BUILDING_STATE_POP_CONSTRUCTION_SECTOR_IMPORTANCE_MULT = 1.0 # Multiply score by this if state GDP is at least the above value for purposes of scoring the first level of construction sector
 
 	# This is the only parameter that is affected by goods stance
-	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_WANTS_HIGH_SUPPLY_FACTOR = 2.0 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces and which we want a high supply of
+	# It needs to overcome the PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR for local goods i.e. electricity
+	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_WANTS_HIGH_SUPPLY_FACTOR = 8.0 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces and which we want a high supply of
 
 	# Government construction applies this multiplier to domestic states when determining where to construct
 	GOVERNMENT_CONSTRUCTION_DOMESTIC_INVESTMENT_BIAS = 5.0
 
+	# The vanilla base score of 1000 is unreasonably high when combined with multipliers
+	# A building's score with 5000 employees is roughly 100 times their productivity
+	PRODUCTION_METHOD_BASE_VALUE = 300
 	# This is lowered to enable PMs that add employment i.e. passenger trains
-	PRODUCTION_METHOD_EMPLOYMENT_CHANGE_FACTOR = 1 # The total score of a PM will be multiplied or divided by 1 + ( this * the proportion of labor that is added or saved by the change )
+	PRODUCTION_METHOD_EMPLOYMENT_CHANGE_FACTOR = 1.0 # The total score of a PM will be multiplied or divided by 1 + ( this * the proportion of labor that is added or saved by the change )
 	# Don't overly penalize temporary shortages - PM changes can be undone if necessary
 	PRODUCTION_METHOD_REDUCE_OUTPUT_PENALTY_FACTOR = 4 # Multiply method score by this if we're reducing the building's output penalties
 	PRODUCTION_METHOD_INCREASE_OUTPUT_PENALTY_FACTOR = 0.95 # Multiply method score by this if we're increasing the building's output penalties

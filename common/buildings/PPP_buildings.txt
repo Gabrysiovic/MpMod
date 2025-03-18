@@ -4,17 +4,33 @@
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
     ownership_type = self
     
-    unlocking_technologies = { 
+    unlocking_technologies = {
         PPP_tech_hv_power 
     }
 
     production_method_groups = {
         PPP_pmg_power_grid
         PPP_pmg_power_grid_scaler
-        #pmg_ownership_capital_building_power_plant ## seems to have been removed by paradox
     }
     
     required_construction = construction_cost_medium
+    
+    ai_value = {
+        value = 1000 
+
+        if = {
+            limit = {
+                NOR = {
+                    has_building = PPP_building_power_grid
+                    any_scope_building = {
+                        is_building_type = PPP_building_power_grid
+                        is_under_construction = yes
+                    }
+                }
+            }
+            add = 4000
+        }
+    }
 
     possible = {
         OR = {
@@ -39,10 +55,10 @@
             is_subsidized = yes
         }
         state = {
-            sg:electricity = { 
+            sg:electricity = {
                 state_goods_pricier >= 0.20
             }
-            sg:PPP_hv_power = { 
+            sg:ppp_hv_power = {
                 state_goods_pricier <= 0.10
             }
         }

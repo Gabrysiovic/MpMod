@@ -68,3 +68,9 @@
     dsk_france.4.d:0 "With our foothold west of the Rhine secured, all nations shall know the might of [SCOPE.GetRootScope.GetCountry.GetName]."
     dsk_france.4.a:0 "The unification of the German people will please the populace"
     dsk_france.4.f:0 " After long hours of debating we elected to seize the territory which was once German from France. Thanks to our brave soldiers we succeeded in annexing Alsace-Lorraine, our nation now expanding west of the Rhine. The strongholds of Metz and Strassburg will bolster the emerging German nation against attacks and will act as a symbol to our power! The local residents will soon leave behind any fondness they held for their French overlords."
+    
+    
+     je_railroads_status:0
+     je_spring_reforms_government_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia"
+     je_spring_reforms_landowners_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia"
+     je_spring_reforms_economic_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia"

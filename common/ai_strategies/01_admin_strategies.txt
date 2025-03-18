@@ -326,14 +326,13 @@ ai_strategy_placate_population = {
 	
 	type = administrative
 
-	desired_tax_level = low
-	max_tax_level = medium
-	min_tax_level = very_low
+	# KAI: Lowering taxes can be crippling when backwards countries can barely stay solvent to begin with
+	# Even for Sepoy Mutiny JE it's better to raise military wages than lowering taxes
+	#desired_tax_level = low
+	#max_tax_level = medium
+	#min_tax_level = very_low
 
-	building_group_weights = {
-		bg_agriculture = 2.0
-		bg_ranching = 2.0
-	}
+	building_group_weights = {}
 	
 	goods_stances = {
 		opium = {
@@ -344,8 +343,10 @@ ai_strategy_placate_population = {
 		}
 	}
 
+	# KAI: This is originally meant to be a bad strategy
+	# I might repurpose it for luddites / anarchist in the future
 	possible = {
-		has_law = law_type:law_traditionalism
+		always = no
 	}
 	
 	weight = {

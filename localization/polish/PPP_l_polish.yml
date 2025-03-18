@@ -38,8 +38,19 @@
     PPP_pm_steam_turbine:    "Steam Turbines"
     PPP_pm_gas_turbine:      "Gas Turbines"
     
-    PPP_pm_local_power: "Local Electricity"
-    PPP_pm_grid_power:  "Electrical Grid"
+    PPP_pm_steam_engine_local:  "$PPP_pm_steam_engine$"
+    PPP_pm_steam_engine_grid:   "$PPP_pm_steam_engine$"
+    PPP_pm_steam_turbine_local: "$PPP_pm_steam_turbine$"
+    PPP_pm_steam_turbine_grid:  "$PPP_pm_steam_turbine$"
+    PPP_pm_gas_turbine_local:   "$PPP_pm_gas_turbine$"
+    PPP_pm_gas_turbine_grid:    "$PPP_pm_gas_turbine$"
+    
+    PPP_pm_local_power_hydro: "Hydroelectric Local Service"
+    PPP_pm_grid_power_hydro:  "Hydroelectric Regional Grid"
+    PPP_pm_local_power_coal:  "Coal-Fired Local Service"
+    PPP_pm_grid_power_coal:   "Coal-Fired Regional Grid"
+    PPP_pm_local_power_oil:   "Oil-Fired Local Service"
+    PPP_pm_grid_power_oil:    "Oil-Fired Regional Grid"
     
     PPP_pm_grid_base: "Regional Distribution"
     

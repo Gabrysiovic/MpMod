@@ -1,5 +1,7 @@
 ﻿pm_hydroelectric_plant = {
 	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+    
+    ai_value = 0
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -7,26 +9,17 @@
 		}
 	}
 	
-	# building_modifiers = {
-		# workforce_scaled = {
-			# goods_input_engines_add = 10
-			# goods_output_electricity_add = 50
-		# }
-
-		# level_scaled = {
-			# building_employment_laborers_add = 2500
-			# building_employment_machinists_add = 1800
-			# building_employment_engineers_add = 1200
-		# }
-	# }
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
 }
 
 pm_coal-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
-
-	unlocking_technologies = {
-		# steam_turbine
-	}
+    
+    ai_value = 2000
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -36,25 +29,15 @@ pm_coal-fired_plant = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# goods_input_engines_add = 15
 			goods_input_coal_add = 30
-			# goods_output_electricity_add = 100
 		}
-
-		# level_scaled = {
-			# building_employment_laborers_add = 2000
-			# building_employment_machinists_add = 1500
-			# building_employment_engineers_add = 1400
-		# }
 	}
 }
 
 pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
-
-	unlocking_technologies = {
-		# oil_turbine
-	}
+    
+    ai_value = 1500
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -64,15 +47,11 @@ pm_oil-fired_plant = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# goods_input_engines_add = 20
 			goods_input_oil_add = 20
-			# goods_output_electricity_add = 150
 		}
 
-		# level_scaled = {
-			# building_employment_laborers_add = 2000
-			# building_employment_machinists_add = 1500
-			# building_employment_engineers_add = 1400
-		# }
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
 	}
 }

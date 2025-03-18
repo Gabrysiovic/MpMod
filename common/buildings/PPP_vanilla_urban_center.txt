@@ -16,6 +16,39 @@
 	}
 	
 	required_construction = construction_cost_very_high
+    
+    ai_value = {
+		value = 1000 
+
+		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
+		if = {
+			limit = {
+				NOR = {
+					has_building = building_power_plant
+					any_scope_building = {
+						is_building_type = building_power_plant
+						is_under_construction = yes
+					}
+				}
+                
+                # PPP
+                trigger_if = {
+                    limit = {
+                        owner = {
+                            has_technology_researched = PPP_tech_hv_power
+                        }
+                    }
+                    owner = {
+                        country_has_building_type_levels = {
+                            target = bt:building_power_plant
+                            value  < 1
+                        }
+                    }
+                }
+			}
+			add = 4000
+		}
+	}
 
 	possible = {
 		owner = {

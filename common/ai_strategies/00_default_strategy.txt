@@ -2320,16 +2320,7 @@ ai_strategy_default = {
 			limit = { 
 				wants_to_solve_schleswig_holstein = yes	
 				scope:target_country = { 
-					OR = {
-						is_oppressor_of_schleswig_holstein = yes
-						AND = {
-							OR = {
-								country_has_primary_culture = cu:north_german
-								country_has_primary_culture = cu:south_german						
-							}
-							is_subject = yes
-						}
-					}
+					kai_should_target_for_schleswig_holstein = yes
 				}
 			}
 			add = 0.5
@@ -2558,16 +2549,7 @@ ai_strategy_default = {
 			limit = { 
 				wants_to_solve_schleswig_holstein = yes	
 				scope:target_country = { 
-					OR = {
-						is_oppressor_of_schleswig_holstein = yes
-						AND = {
-							OR = {
-								country_has_primary_culture = cu:north_german
-								country_has_primary_culture = cu:south_german						
-							}
-							is_subject = yes
-						}
-					}
+					kai_should_target_for_schleswig_holstein = yes
 				}
 			}
 			add = 10
@@ -3275,7 +3257,7 @@ ai_strategy_default = {
 
 			min = {
 				value = kai_state_income
-				divide = 2500 # 1 construction output per this much income
+				divide = 3000 # 1 construction output per this much income
 			}
 		}
 
@@ -3300,9 +3282,9 @@ ai_strategy_default = {
 		multiply = {
 			value = gold_reserves
 			divide = gold_reserves_limit
-			multiply = 1.3
+			multiply = 1.33
 			min = 1
-			max = 1.3
+			max = 1.33
 		}
 
 		min = 10
@@ -3403,13 +3385,17 @@ ai_strategy_default = {
 
 		save_temporary_value_as = income_factor
 
+		add = scope:population_factor
+
 		# KAI: Cap population factor by income
-		add = {
+		max = {
+			value = scope:income_factor
+			multiply = 4
+		}
+
+		min = {
 			value = scope:population_factor
-			max = {
-				value = scope:income_factor
-				multiply = 2
-			}
+			multiply = 0.5
 		}
 		
 		# More advanced standing armies are expensive and should be smaller relative to population
@@ -3493,25 +3479,37 @@ ai_strategy_default = {
 			multiply = 1.15
 		}
 
+		if = {
+			limit = { has_strategy = ai_strategy_armed_isolationism }
+			multiply = 0.75
+		}	
+
 		save_temporary_value_as = population_factor
 
 		# 1 level of naval base per 5k income, multiplied by relative incorporated coastal population to total incorporated population
 		value = {
 			value = kai_adjusted_military_spending
-			divide = cached_ai_incorporated_population
-			multiply = cached_ai_incorporated_coastal_population
 			divide = 1500
 		}
 
 		save_temporary_value_as = income_factor
 
+		multiply = {
+			value = cached_ai_incorporated_coastal_population
+			divide = cached_ai_incorporated_population
+		}
+
+		add = scope:population_factor
+
 		# KAI: Cap population factor by income
-		add = {
+		max = {
+			value = scope:income_factor
+			multiply = 2
+		}
+
+		min = {
 			value = scope:population_factor
-			max = {
-				value = scope:income_factor
-				multiply = 2
-			}
+			multiply = 0.5
 		}
 		
 		# More advanced navies are expensive and should be smaller relative to population
@@ -3529,11 +3527,6 @@ ai_strategy_default = {
 			limit = { has_technology_researched = battleship_tech }
 			multiply = 0.75
 		}
-
-		if = {
-			limit = { has_strategy = ai_strategy_armed_isolationism }
-			multiply = 0.75
-		}	
 		
 		max = 10000
 		min = 0		
@@ -3683,6 +3676,16 @@ ai_strategy_default = {
 	# A default value of 0 means the AI will tend to privatize most buildings
 	nationalization_desire = {
 		value = 0.0
+
+		# KAI: AI can only queue around one building per week.
+		# Surplus beyond that point is pointless.
+		# Start privatizing to feed the investment pool.
+		if = {
+			limit = {
+				weekly_net_fixed_income > 300000
+			}
+			subtract = 0.25
+		}
 	
 		if = {
 			limit = {
@@ -3800,13 +3803,6 @@ ai_strategy_default = {
 					has_technology_researched = defense_in_depth
 					has_technology_researched = sea_lane_strategies
 				}
-				kai_should_use_goods_stances = yes
-			}
-		}
-		automobiles = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = combustion_engine
 				kai_should_use_goods_stances = yes
 			}
 		}
@@ -6778,16 +6774,6 @@ ai_strategy_default = {
 					}
 					add = 25
 				}				
-			}
-			
-			if = {
-				limit = { 
-					wants_to_solve_schleswig_holstein = yes
-					exists = c:HOL
-					scope:target_country = { this = c:HOL }
-					can_reach_target_country = no
-				}
-				add = 100
 			}
 			
 			# Relations with target

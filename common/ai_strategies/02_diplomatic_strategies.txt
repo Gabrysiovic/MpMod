@@ -267,6 +267,20 @@ ai_strategy_territorial_expansion = {
 			add = 5
 		}
 
+		if = {
+			limit = {
+				has_journal_entry = je_manifest_destiny_mexico
+			}
+			add = 25
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_unify_afghanistan
+			}
+			add = 250
+		}
+
 		# AI implications for Power Blocs: 'Territorial Expansion' strategy is more likely for Blocs with Aggressive Coordination
 		if = {
 			limit = {
@@ -1152,7 +1166,7 @@ ai_strategy_economic_imperialism = {
 				c:JAP = { has_law = law_type:law_isolationism }
 			}
 			multiply = 2.0
-		}	
+		}
 
 		if = {
 			limit = { navy_size < 50 }
@@ -1162,7 +1176,7 @@ ai_strategy_economic_imperialism = {
 		if = {
 			limit = { navy_size >= 75 }
 			multiply = 1.5
-		}	
+		}		
 		
 		if = {
 			limit = { has_radical_leftist_government = yes }
@@ -1210,10 +1224,7 @@ ai_strategy_unify_germany = {
 		if = {
 			limit = { 
 				scope:target_country = {			
-					OR = {
-						country_has_primary_culture = cu:north_german
-						country_has_primary_culture = cu:south_german
-					}
+					kai_relevant_for_german_unification = yes
 				}
 			}
 			add = 25
@@ -1225,7 +1236,7 @@ ai_strategy_unify_germany = {
 	}
 	
 	aggression = {
-		value = -2.0
+		value = 0
 		
 		if = {
 			limit = {
@@ -1233,33 +1244,18 @@ ai_strategy_unify_germany = {
 					is_unification_candidate = GER
 				}
 			}
-			add = 0.25
-
-			if = {
-				limit = {
-					has_technology_researched = enlistment_offices
-				}
-				add = 10
-			}	
+			add = 10
 		}
 		else_if = {
 			limit = { 
 				scope:target_country = {			
 					OR = {
-						country_has_primary_culture = cu:north_german
-						country_has_primary_culture = cu:south_german
+						kai_relevant_for_german_unification = yes
 						NOT = { is_unification_candidate = GER } 
 					}
 				}
 			}
 			add = 0.25
-
-			if = {
-				limit = {
-					has_technology_researched = enlistment_offices
-				}
-				add = 2
-			}				
 		}
 
 
@@ -1287,9 +1283,8 @@ ai_strategy_unify_germany = {
 
 	building_group_weights = {
 		bg_army = 1.5
-		bg_artillery_foundaries = 1.5
-		bg_arms_industries = 1.5
-		bg_munition_plants = 1.5
+		# KAI: A navy might be necessary for reaching Schleswig-Holstein
+		bg_navy = 1.5
 	}
 	
 	state_value = {
@@ -1320,10 +1315,7 @@ ai_strategy_unify_germany = {
 			if = {
 				limit = {
 					scope:target_country = {
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}
+						kai_relevant_for_german_unification = yes
 						NOT = { is_unification_candidate = GER }
 						OR = { 
 							is_supporting_unification_candidate = { who = root country_formation = GER }
@@ -1339,10 +1331,7 @@ ai_strategy_unify_germany = {
 			if = {
 				limit = {
 					scope:target_country = {
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}					
+						kai_relevant_for_german_unification = yes
 						NOT = { is_unification_candidate = GER }
 						NOR = { 
 							is_supporting_unification_candidate = { who = root country_formation = GER }
