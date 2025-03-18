@@ -389,6 +389,7 @@ principle_foreign_investment_2 = {
 	member_modifier = {
 		# Members get reduced nationalization cost for assets of non-members
 		country_nationalization_cost_non_members_mult = -0.5
+		state_capitalists_investment_pool_efficiency_mult = 0.10
 
 		# This modifier is just here to generate a tooltip. It doesn't actually do anything on its own
 		country_higher_leverage_from_economic_dependence_bool = yes
@@ -410,7 +411,9 @@ principle_foreign_investment_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)	
 		country_nationalization_cost_non_members_mult = -0.5
-		country_company_throughput_bonus_add = 0.1
+		state_capitalists_investment_pool_efficiency_mult = 0.15
+		country_company_throughput_bonus_add = -0.1
+		country_max_companies_add = 1
 
 		# This modifier is just here to generate a tooltip. It doesn't actually do anything on its own
 		country_higher_leverage_from_economic_dependence_bool = yes
@@ -441,7 +444,6 @@ principle_transport_1 = {
 		# Members get increased Infrastructure from pops
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 	
-		unit_supply_consumption_mult = -0.05		
 	}
 	
 	ai_weight = {
@@ -473,7 +475,6 @@ principle_transport_2 = {
 		# Modifiers from previous level(s)	
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
-		unit_supply_consumption_mult = -0.15
 		
 		# Members have increased convoy capacity
 		country_convoys_capacity_mult = 0.2
@@ -493,10 +494,9 @@ principle_transport_3 = {
 		country_convoys_capacity_mult = 0.2
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
-		unit_supply_consumption_mult = -0.25
 		
 		# Increased land trade capacity
-		market_land_trade_capacity_add = 50
+		market_land_trade_capacity_add = 200
 		
 		# Unlocks a set of PMs for Railways
 	}
@@ -551,8 +551,6 @@ principle_defensive_cooperation_1 = {
 	}
 
 	power_bloc_modifier = {
-		# Members cannot start wars amongst each other
-		power_bloc_disallow_war_bool = yes
 		political_movement_radicalism_add = -0.10
 	}
 	
@@ -590,8 +588,6 @@ principle_defensive_cooperation_2 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 
 	power_bloc_modifier = {
-		# Modifiers from previous level(s)
-		power_bloc_disallow_war_bool = yes
 		political_movement_radicalism_add = -0.20
 		
 		# Swaying members to join your side costs 50% less maneuvers if the inviting country is on the target's side
@@ -620,7 +616,6 @@ principle_defensive_cooperation_3 = {
 
 	power_bloc_modifier = {
 		# Modifiers from previous level(s)
-		power_bloc_disallow_war_bool = yes
 		power_bloc_target_sway_cost_mult = -0.5
 	}
 	
