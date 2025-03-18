@@ -313,6 +313,7 @@ principle_sacred_civics_1 = {
 		# This modifier actually has no effect and is just here to generate a tooltip, the effects are scripted in diplomactic_actions
 		country_higher_diplomatic_acceptance_same_religion_bool = yes
 		state_conversion_mult = 0.25
+		country_acceptance_state_religion_add = 5
 	}
 	
 	ai_weight = {
@@ -347,6 +348,7 @@ principle_sacred_civics_2 = {
 		# Modifiers from previous level(s)		
 		country_higher_diplomatic_acceptance_same_religion_bool = yes
 		state_conversion_mult = 0.5
+		country_acceptance_state_religion_add = 10
 		
 		# Lower liberty desire for subjects with the same religion
 		# This modifier actually has no effect and is just here to generate a tooltip, the effects are scripted in scripted_values
@@ -367,6 +369,7 @@ principle_sacred_civics_3 = {
 		country_higher_diplomatic_acceptance_same_religion_bool = yes
 		country_reduced_liberty_desire_same_religion_bool = yes
 		state_conversion_mult = 1
+		country_acceptance_state_religion_add = 15
 	}
 
 	leader_modifier = {
@@ -551,7 +554,7 @@ principle_defensive_cooperation_1 = {
 	}
 
 	power_bloc_modifier = {
-		political_movement_radicalism_add = -0.10
+		political_movement_radicalism_add = -0.05
 	}
 	
 	ai_weight = {
@@ -588,7 +591,8 @@ principle_defensive_cooperation_2 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 
 	power_bloc_modifier = {
-		political_movement_radicalism_add = -0.20
+		political_movement_radicalism_add = -0.1
+		military_formation_organization_gain_add = 0.25
 		
 		# Swaying members to join your side costs 50% less maneuvers if the inviting country is on the target's side
 		power_bloc_target_sway_cost_mult = -0.5
@@ -611,7 +615,8 @@ principle_defensive_cooperation_3 = {
 	member_modifier = {
 		# Countries forced to join defensive plays against members
 		country_join_power_bloc_member_in_defensive_plays_bool = yes
-		political_movement_radicalism_add = -0.30
+		political_movement_radicalism_add = -0.15
+		military_formation_organization_gain_add = 0.5
 	}
 
 	power_bloc_modifier = {
@@ -619,6 +624,115 @@ principle_defensive_cooperation_3 = {
 		power_bloc_target_sway_cost_mult = -0.5
 	}
 	
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
+
+###### Offensive
+
+principle_aggressive_coordination_3 = {
+	icon = "gfx/interface/icons/principles_icons/aggressive_coordination.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
+
+	power_bloc_modifier = {	
+		# Reduces cohesion
+		power_bloc_cohesion_add = -10
+	}
+	
+	member_modifier = {
+		# Modifiers from previous level(s)
+		country_initiator_war_goal_maneuver_cost_mult = -0.3
+		country_war_exhaustion_casualties_mult = -0.15
+	
+		# Countries forced to join diplomatic plays of members, other countries are not happy about this threat
+		country_join_power_bloc_member_in_plays_bool = yes
+		country_infamy_generation_mult = -0.15
+	}
+	
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
+
+
+### Divine Economics
+
+principle_divine_economics_1 = {
+	icon = "gfx/interface/icons/principles_icons/divine_economy.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
+
+	visible = {
+		has_dlc_feature = power_bloc_features
+	}
+
+	power_bloc_modifier = {
+		# Increased trade route competitiveness for PB trade routes
+		power_bloc_religion_trade_route_competitiveness_mult = 0.5
+		
+	}
+	
+	member_modifier = {
+		# Higher subject payments from other religions
+		country_subject_income_transfer_heathen_mult = 0.5	
+		state_clergy_investment_pool_efficiency_mult = 0.10		
+	}
+	
+	ai_weight = {
+		value = 200 # Religious PBs should tend towards picking the religious principles
+		
+		if = {
+			limit = {
+				ig:ig_devout ?= { is_in_government = yes }
+			}	
+			add = 100
+		}
+	}
+}
+
+principle_divine_economics_2 = {
+	icon = "gfx/interface/icons/principles_icons/divine_economy.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
+
+	power_bloc_modifier = {
+		# Modifiers from previous level(s)		
+		power_bloc_religion_trade_route_competitiveness_mult = 0.5
+		
+	}
+	
+	member_modifier = {
+		# Modifiers from previous level(s)		
+		country_subject_income_transfer_heathen_mult = 0.5
+		state_clergy_investment_pool_efficiency_mult = 0.15
+
+		# New PM for Financial Districts/Manor Houses unlocked via trigger
+	}	
+	
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
+
+principle_divine_economics_3 = {
+	icon = "gfx/interface/icons/principles_icons/divine_economy.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
+	
+	power_bloc_modifier = {
+		# Modifiers from previous level(s)		
+		power_bloc_religion_trade_route_competitiveness_mult = 0.5
+	}
+	
+	member_modifier = {
+		# Modifiers from previous level(s)		
+		country_subject_income_transfer_heathen_mult = 0.5		
+		state_clergy_investment_pool_efficiency_mult = 0.25
+		
+		# Higher wages for state religion pops
+		country_state_religion_wages_mult = 0.25
+	
+		# New PM for Financial Districts/Manor Houses unlocked via trigger
+	}
+
 	ai_weight = {
 		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
 	}
