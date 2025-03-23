@@ -675,7 +675,7 @@ principle_divine_economics_1 = {
 	member_modifier = {
 		# Higher subject payments from other religions
 		country_subject_income_transfer_heathen_mult = 0.5	
-		state_clergy_investment_pool_efficiency_mult = 0.10		
+		state_clergymen_investment_pool_efficiency_mult = 0.10	
 	}
 	
 	ai_weight = {
@@ -703,7 +703,7 @@ principle_divine_economics_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)		
 		country_subject_income_transfer_heathen_mult = 0.5
-		state_clergy_investment_pool_efficiency_mult = 0.15
+		state_clergymen_investment_pool_efficiency_mult = 0.15
 
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 	}	
@@ -725,7 +725,7 @@ principle_divine_economics_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)		
 		country_subject_income_transfer_heathen_mult = 0.5		
-		state_clergy_investment_pool_efficiency_mult = 0.25
+		state_clergymen_investment_pool_efficiency_mult = 0.25
 		
 		# Higher wages for state religion pops
 		country_state_religion_wages_mult = 0.25
