@@ -13,7 +13,7 @@
         PPP_pmg_power_grid_scaler
     }
     
-    required_construction = construction_cost_medium
+    required_construction = construction_cost_small
     
     ai_value = {
         value = 1000 
