@@ -15,6 +15,7 @@
 				c:POR = ROOT
 				c:SPA = ROOT
  				c:GRE = ROOT
+				c:SIA = ROOT
 			}
 		
 	
@@ -58,6 +59,7 @@ je_spring_reforms_economic = {
 				c:POR = ROOT
 				c:SPA = ROOT
  				c:GRE = ROOT
+				c:SIA = ROOT
 			}
 		
 	}	
@@ -99,6 +101,7 @@ je_spring_reforms_landowners = {
 				c:POR = ROOT
 				c:SPA = ROOT
  				c:GRE = ROOT
+				c:SIA = ROOT
 			}
 		
 	}
