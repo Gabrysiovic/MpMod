@@ -13,16 +13,33 @@ groups= {
 		target_country = {  NOT = c:CHC } 
 		
 	}
+
+	possible = {
+		# Either broken_truce variable is set or this country has less than 25 infamy
+			OR = {
+				NOT = {
+					custom_tooltip = {
+						text = has_broken_truce_custom_tooltip
+						has_variable = broken_truce
+					}
+				}
+				root = { infamy <= 25 }
+			}
+	}
+
 	accept_effect = {
             change_infamy = { value = 0 add = { value = scope:target_country.total_population divide = 100000 max = 50 } } 	
 			hidden_effect = {
 			end_truce = scope:target_country
-		}		
-		}
+			}	
+			if = { 
+				NOT = {has_variable = broken_truce} 
+				set_variable = { name = broken_truce }
+			}	
 		custom_tooltip = {
 			text = break_truce_custom_tooltip
 			subject = scope:target_country
-		
+		}
 	}
 
 	ai = {

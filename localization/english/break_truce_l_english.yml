@@ -9,3 +9,4 @@
     break_truce_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Breaks Truce"
     break_truce_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has broken their truce with [TARGET_COUNTRY.GetName]."
     break_truce_custom_tooltip:0 "[SCOPE.sCountry('actor').GetName] breaks their truce with [SCOPE.sCountry('target_country').GetName]."
+    has_broken_truce_custom_tooltip:0 "Has not broken truce before."
