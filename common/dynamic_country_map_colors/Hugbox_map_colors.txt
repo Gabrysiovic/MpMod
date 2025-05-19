@@ -29,3 +29,14 @@ Imperial_federation =
 		Not = { Exists = c:SCO }
 	}
 }	
+Just_Britain =
+{
+	color = plc_pink
+
+	possible = 
+	{
+		exists = c:GBR
+		THIS = c:GBR
+		Exists = c:SCO
+	}
+}

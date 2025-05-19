@@ -273,6 +273,22 @@ principle_military_industry_3 = {
 
 ### Freedom of Movement
 
+principle_freedom_of_movement_2 = {
+	icon = "gfx/interface/icons/principles_icons/freedom_of_movement.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
+
+	member_modifier = {
+		# Modifiers from previous level(s)	
+		state_migration_quota_mult = 0.25
+		
+		# Increases chance to be picked for mass migrations
+		country_mass_migration_attraction_mult = 0.25
+	}
+	
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
 
 
 principle_freedom_of_movement_3 = {
