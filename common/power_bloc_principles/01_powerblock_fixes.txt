@@ -365,7 +365,7 @@ principle_sacred_civics_2 = {
 		country_higher_diplomatic_acceptance_same_religion_bool = yes
 		state_conversion_mult = 0.5
 		country_acceptance_state_religion_add = 10
-		
+		state_birth_rate_mult = 0.025
 		# Lower liberty desire for subjects with the same religion
 		# This modifier actually has no effect and is just here to generate a tooltip, the effects are scripted in scripted_values
 		country_reduced_liberty_desire_same_religion_bool = yes
@@ -386,6 +386,7 @@ principle_sacred_civics_3 = {
 		country_reduced_liberty_desire_same_religion_bool = yes
 		state_conversion_mult = 1
 		country_acceptance_state_religion_add = 15
+	    state_birth_rate_mult = 0.05
 	}
 
 	leader_modifier = {
