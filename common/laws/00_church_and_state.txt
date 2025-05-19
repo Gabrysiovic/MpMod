@@ -40,6 +40,7 @@ law_state_religion = {
 		country_allow_conversion_open_prejudice_bool = yes
 		country_allow_conversion_second_rate_citizen_bool = yes
 		country_allow_conversion_full_acceptance_bool = yes
+	   
 	}
 
 	can_impose = {
