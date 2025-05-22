@@ -14,8 +14,17 @@ ecchi_net_thorbecke_character_template = {
     traits = { tactful experienced_political_operator }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                    exists = c:NET
+                    this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
@@ -74,8 +83,17 @@ ecchi_net_kuyper_character_template = {
     traits = { pious ambitious persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:NET
-            this = c:NET
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                    exists = c:NET
+                    this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_interest_group_type = ig_devout
@@ -99,9 +117,18 @@ ecchi_net_troelstra_character_template = {
     birth_date = 1860.4.20
     traits = { reckless romantic persistent }
     interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:NET
-            this = c:NET
+         country_trigger = {
+			OR = {
+                AND = {
+                    exists = c:UNL
+                    this = c:UNL
+                    NOT = { exists = c:NET }
+                }
+                AND = {
+                    exists = c:NET
+                    this = c:NET
+                }
+            }
         }
         interest_group_trigger = {
             is_marginal = no

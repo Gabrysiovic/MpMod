@@ -304,8 +304,6 @@ principle_freedom_of_movement_3 = {
 	power_bloc_modifier = {
 		# Unlocks a new PM for Universities and Art Academies that increases migration attraction, unlocked per trigger in the PM
 	
-		# Unlocks power-bloc wide migration
-		power_bloc_allow_wider_migration_area_bool = yes
 	}
 
 	ai_weight = {
