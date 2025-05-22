@@ -9,22 +9,38 @@ groups= {
 		is_revolutionary = no
 		has_truce_with = scope:target_country
 		aggressive_diplomatic_plays_permitted = yes	
-		target_country = {  NOT = c:CIR }
-		target_country = {  NOT = c:CHC } 
+		NOT = { scope:target_country = c:CIR }
+		NOT = { scope:target_country = c:CHC }
 		
 	}
 
 	possible = {
-		# Either broken_truce variable is set or this country has less than 25 infamy
-			OR = {
+		# 5 years minimum, 10 years maximum unless the initiator has less than 25 infamy or 50 infamy if not a great power
+		    AND = {
 				NOT = {
-					custom_tooltip = {
-						text = has_broken_truce_custom_tooltip
-						has_variable = broken_truce
+						custom_tooltip = {
+							text = broken_truce_in_5_years_custom_tooltip
+							has_variable = broken_truce_5_years
+						}
+				}
+				OR = {
+					NOT = {
+						custom_tooltip = {
+							text = broken_truce_in_10_years_custom_tooltip
+							has_modifier = broken_truce_10_years
+						}
+					}
+					infamy <= 25
+					AND = {
+						custom_tooltip = {
+							text = broken_truce_in_10_years_great_power_custom_tooltip
+							infamy <= 50
+							country_rank < rank_value:great_power
+						}
 					}
 				}
-				root = { infamy <= 25 }
 			}
+
 	}
 
 	accept_effect = {
@@ -33,9 +49,11 @@ groups= {
 			end_truce = scope:target_country
 			}	
 			if = { 
-				NOT = {has_variable = broken_truce} 
-				set_variable = { name = broken_truce }
-			}	
+				has_modifier = broken_truce_10_years
+				remove_modifier = broken_truce_10_years
+			}
+			set_variable = { name = broken_truce_5_years years = 5 }
+			add_modifier = { name = broken_truce_10_years years = 10 }
 		custom_tooltip = {
 			text = break_truce_custom_tooltip
 			subject = scope:target_country
