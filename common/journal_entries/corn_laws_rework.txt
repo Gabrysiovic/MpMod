@@ -5,8 +5,16 @@
 
 	is_shown_when_inactive = {
 		NOT = { has_variable = corn_laws_abolished }
-		NOT = { THIS = c:RUS }
-		NOT = { THIS = c:CHI }
+		OR = 
+		{
+			NOT = { THIS = c:RUS }
+			Year >= 1853
+		}
+		OR = 
+		{
+			NOT = { THIS = c:CHI }
+			Year >= 1860
+		}
 		ig:ig_landowners = {
 			is_marginal = no
 		}

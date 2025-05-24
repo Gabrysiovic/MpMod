@@ -642,7 +642,7 @@ psychiatry = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-	    state_education_access_add = 0.05
+	    state_education_access_add = 0.025
 	}
 	
 	unlocking_technologies = {
@@ -1196,7 +1196,7 @@ philosophical_pragmatism = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-	    state_education_access_add = 0.05
+	    state_education_access_add = 0.025
 	}
 	
 	unlocking_technologies = {
@@ -1416,7 +1416,7 @@ psychoanalysis = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-	    state_education_access_add = 0.05
+	    state_education_access_add = 0.025
 	}
 	
 	unlocking_technologies = {
@@ -1604,7 +1604,7 @@ analytical_philosophy = {
 	
 	modifier = {
    
-     state_education_access_add = 0.05
+     state_education_access_add = 0.025
 	}
 	
 	ai_weight = {
