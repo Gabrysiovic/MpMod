@@ -117,3 +117,12 @@ state_trait_christianiafjorden = {
 		state_building_port_max_level_add = 2
 	}
 }
+
+state_trait_toll = {
+    icon = "gfx/interface/icons/state_trait_icons/malaria.dds"
+	
+	
+	modifier = {
+		country_tax_income_add = 5000
+	}
+}
