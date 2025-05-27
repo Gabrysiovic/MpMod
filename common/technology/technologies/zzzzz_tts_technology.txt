@@ -172,6 +172,7 @@ steel_shipbuilding_tech = {
 	}
 	
 	unlocking_technologies = {
+	predreadnought_tech
 	}
 
 	ai_weight = {
@@ -215,7 +216,7 @@ turbine_powered_ships_tech = {
 	}
 	
 	unlocking_technologies = {
-		steel_shipbuilding_tech
+	dreadnought	
 	}
 
 	ai_weight = {
@@ -355,7 +356,7 @@ large_scale_shipbuilding_tech = {
 	}
 	
 	unlocking_technologies = {
-		turbine_powered_ships_tech
+	battleship_tech
 	}
 
 	ai_weight = {

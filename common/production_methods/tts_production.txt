@@ -204,7 +204,7 @@ pm_military_shipbuilding_steel = {
 	texture = "gfx/interface/icons/production_method_icons/steel_military_shipbuilding.dds"
 	
 	unlocking_technologies = {
-		steel_shipbuilding_tech
+		predreadnought_tech
 	}
 
 	building_modifiers = {
@@ -233,7 +233,7 @@ pm_military_shipbuilding_turbine = {
 	texture = "gfx/interface/icons/production_method_icons/turbine_military_shipbuilding.dds"
 	
 	unlocking_technologies = {
-		turbine_powered_ships_tech
+		dreadnought
 	}
 
 	building_modifiers = {
@@ -262,7 +262,7 @@ pm_military_shipbuilding_arc_welding = {
 	texture = "gfx/interface/icons/production_method_icons/arcwelded_military_shipbuilding.dds"
 	
 	unlocking_technologies = {
-		large_scale_shipbuilding_tech
+		battleship_tech
 	}
 
 	building_modifiers = {
