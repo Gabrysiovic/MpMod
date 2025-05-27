@@ -40,7 +40,7 @@ STATE_YEMEN = {
         undiscovered_amount = 20
     }
     
-    traits = { "state_trait_toll"}
+    traits = { "state_trait_toll_yemen"}
     
     
     naval_exit_id = 3047

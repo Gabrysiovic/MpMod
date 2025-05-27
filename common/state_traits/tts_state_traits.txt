@@ -118,8 +118,8 @@ state_trait_christianiafjorden = {
 	}
 }
 
-state_trait_toll = {
-    icon = "gfx/interface/icons/state_trait_icons/malaria.dds"
+state_trait_toll_yemen = {
+    icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	
 	modifier = {
