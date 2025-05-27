@@ -118,11 +118,4 @@ state_trait_christianiafjorden = {
 	}
 }
 
-state_trait_toll_yemen = {
-    icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
-	
-	modifier = {
-		country_tax_income_add = 5000
-	}
-}
+
