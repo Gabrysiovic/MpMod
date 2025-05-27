@@ -74,3 +74,7 @@
      je_spring_reforms_government_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia, Siam, Punjab"
      je_spring_reforms_landowners_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia, Siam, Punjab"
      je_spring_reforms_economic_status:0 "Reform journal entry made for Japan, Ottomans, Brazil, Persia, Mexico, Portugal, Spain, Greece, Colombia, Siam, Punjab"
+     
+     
+    state_trait_toll_yemen:0 "Strait of Aden"
+    state_trait_toll_copenhagen:0 "Sound Toll"

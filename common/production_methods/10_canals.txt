@@ -4,7 +4,7 @@
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-		    country_tax_income_add = 40000
+		    country_tax_income_add = 25000
 		}
 	}
 
@@ -35,7 +35,7 @@ pm_canal2 = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-		    country_tax_income_add = 15000
+		    country_tax_income_add = 10000
 		}
 	}
 
@@ -65,7 +65,7 @@ pm_canal3 = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-		    country_tax_income_add = 20000
+		    country_tax_income_add = 5000
 		}
 	}
 
@@ -94,7 +94,7 @@ pm_canal4 = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-		    country_tax_income_add = 25000
+		    country_tax_income_add = 15000
 		}
 	}
 
