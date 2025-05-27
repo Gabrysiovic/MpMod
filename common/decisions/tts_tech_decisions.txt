@@ -18,7 +18,7 @@ carriers_decision = {
 		has_technology_researched = carrier_tech
 		has_technology_researched = battleship_tech
 		has_technology_researched = military_aviation
-	}por
+	}
 
 	when_taken = {
 		set_variable = researching_carriers
